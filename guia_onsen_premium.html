@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Guía Completa del Onsen — Kyushu, Japón</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+
+:root{
+  --ink:    #1C1008;
+  --ink2:   #3E2418;
+  --ink3:   #6E4C34;
+  --page:   #F8F0DC;
+  --paper:  #F0E6CC;
+  --warm:   #E2D0AC;
+  --warm2:  #C8B48A;
+  --amber:  #B87C08;
+  --amber2: #D89A10;
+  --amber3: #ECC038;
+  --red:    #B42C14;
+  --red2:   #8C1E0C;
+  --mist:   #947860;
+  --rule:   rgba(184,124,8,.22);
+  --rule2:  rgba(184,124,8,.10);
+  --card-border: rgba(28,16,8,.20);
+}
+
+body{
+  font-family:'Source Sans 3',sans-serif;
+  background:#C8B890;
+  color:var(--ink);
+  -webkit-print-color-adjust:exact;
+  print-color-adjust:exact;
+  font-size:11px;
+  line-height:1.75;
+}
+
+.page{
+  width:210mm;
+  min-height:297mm;
+  margin:0 auto 20px;
+  background:var(--page);
+  background-image:
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='240'><path d='M22,240 C18,212 27,182 23,154 C19,126 25,98 21,70 C17,42 21,16 19,0' stroke='%23B87C08' stroke-opacity='0.07' stroke-width='12' fill='none' stroke-linecap='round'/><path d='M60,240 C56,215 65,188 61,162 C57,136 63,110 59,84 C55,58 59,32 57,10' stroke='%23B87C08' stroke-opacity='0.05' stroke-width='8' fill='none' stroke-linecap='round'/><path d='M98,240 C94,218 103,194 99,170 C95,146 101,122 97,98 C93,74 97,50 95,28' stroke='%23B87C08' stroke-opacity='0.035' stroke-width='5' fill='none' stroke-linecap='round'/></svg>"),
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><circle cx='260' cy='260' r='48' fill='none' stroke='%23B87C08' stroke-opacity='0.072' stroke-width='1.5'/><circle cx='260' cy='260' r='88' fill='none' stroke='%23B87C08' stroke-opacity='0.056' stroke-width='1.5'/><circle cx='260' cy='260' r='130' fill='none' stroke='%23B87C08' stroke-opacity='0.040' stroke-width='1.5'/><circle cx='260' cy='260' r='175' fill='none' stroke='%23B87C08' stroke-opacity='0.028' stroke-width='1.5'/><circle cx='260' cy='260' r='224' fill='none' stroke='%23B87C08' stroke-opacity='0.018' stroke-width='1.5'/></svg>"),
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'><path d='M0,40 A40,40,0,0,1,80,40' fill='none' stroke='%23B87C08' stroke-opacity='0.048' stroke-width='1'/><path d='M-40,80 A40,40,0,0,1,40,80' fill='none' stroke='%23B87C08' stroke-opacity='0.048' stroke-width='1'/><path d='M40,80 A40,40,0,0,1,120,80' fill='none' stroke='%23B87C08' stroke-opacity='0.048' stroke-width='1'/></svg>");
+  background-repeat:no-repeat, no-repeat, repeat;
+  background-size:160px 240px, 260px 260px, 80px 80px;
+  background-position:left top, right bottom, 0 0;
+  position:relative;
+  overflow:hidden;
+  page-break-after:always;
+  break-after:page;
+}
+
+/* ── COVER ─────────────────────────── */
+.p-cover{
+  background:
+    linear-gradient(160deg,#1A1208 0%,#2E1C0A 40%,#241408 70%,#1C1006 100%);
+  min-height:297mm;
+  display:flex;
+  flex-direction:column;
+  color:#fff;
+  position:relative;
+}
+
+.cv-watermark{
+  position:absolute;
+  right:-10mm; top:48%;
+  transform:translateY(-50%);
+  font-family:'Noto Serif JP','Noto Serif',serif;
+  font-size:260px; font-weight:900;
+  color:rgba(255,255,255,.03);
+  line-height:1; pointer-events:none;
+  user-select:none;
+}
+
+.cv-top{
+  padding:11mm 13mm 0;
+  display:flex; align-items:center; gap:12px;
+  position:relative; z-index:2; flex-shrink:0;
+}
+.cv-top-line{flex:1; height:1px; background:rgba(236,192,56,.28);}
+.cv-top-text{
+  font-size:7px; font-weight:600; letter-spacing:4px;
+  text-transform:uppercase; color:var(--amber3); white-space:nowrap;
+}
+
+.cv-main{
+  flex:1; padding:0 13mm;
+  display:flex; flex-direction:column; justify-content:center;
+  position:relative; z-index:2; padding-top:6mm;
+}
+
+.cv-eyebrow{
+  font-size:8px; font-weight:600; letter-spacing:5px;
+  text-transform:uppercase; color:rgba(255,255,255,.28);
+  margin-bottom:12px;
+}
+
+.cv-title{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:300; font-size:86px; line-height:.86;
+  letter-spacing:-2px; color:#fff;
+}
+.cv-title em{
+  display:block; font-style:italic;
+  color:var(--amber3); font-weight:600; font-size:96px;
+}
+
+.cv-rule{
+  width:42px; height:2px;
+  background:var(--amber3);
+  margin:22px 0 18px;
+}
+
+.cv-intro{
+  font-family:'EB Garamond',serif;
+  font-size:13.5px; font-style:italic;
+  color:rgba(255,255,255,.42); line-height:1.75;
+  max-width:280px; margin-bottom:26px;
+}
+
+.cv-index{
+  border-top:1px solid rgba(255,255,255,.07);
+  padding-top:14px; display:flex; flex-direction:column; gap:3px;
+}
+.cv-index-item{
+  font-size:8.5px; color:rgba(255,255,255,.23); line-height:1.8;
+}
+.cv-index-item::before{
+  content:'—'; color:var(--amber3); margin-right:8px;
+}
+
+.cv-foot{
+  padding:14px 13mm 13mm; flex-shrink:0;
+  display:flex; align-items:flex-end; justify-content:space-between;
+  border-top:1px solid rgba(255,255,255,.07);
+  position:relative; z-index:2;
+}
+.cv-author-lbl{
+  font-size:7px; letter-spacing:3px;
+  color:var(--amber3); text-transform:uppercase; margin-bottom:3px;
+}
+.cv-author-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:24px; font-weight:600; color:#fff; line-height:1;
+}
+.cv-author-name span{color:var(--amber3);}
+.cv-author-sub{font-size:8.5px; color:rgba(255,255,255,.28); margin-top:3px;}
+.cv-edition{
+  font-family:'EB Garamond',serif;
+  font-size:11px; font-style:italic;
+  color:rgba(255,255,255,.18); text-align:right; line-height:1.8;
+}
+
+.cv-bar{
+  position:absolute; bottom:0; left:0; right:0; height:4px;
+  background:linear-gradient(90deg,var(--amber),var(--amber3),var(--red));
+}
+
+/* ── CHAPTER OPENER ─────────────────── */
+.ch-opener{
+  height:92px;
+  display:flex; align-items:flex-end;
+  padding:0 13mm 15px;
+  position:relative; overflow:hidden;
+}
+.ch-opener::before{
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(to right,rgba(0,0,0,.22) 0%,transparent 65%);
+  z-index:1;
+}
+.ch-num-ghost{
+  position:absolute; right:10mm; top:50%;
+  transform:translateY(-50%);
+  font-family:'Cormorant Garamond',serif;
+  font-size:112px; font-weight:700;
+  color:rgba(255,255,255,.055); line-height:1;
+  z-index:0; pointer-events:none;
+}
+.ch-opener-content{position:relative; z-index:2;}
+.ch-num{
+  font-size:7.5px; font-weight:700; letter-spacing:4px;
+  color:var(--amber3); text-transform:uppercase; margin-bottom:5px;
+}
+.ch-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:27px; font-weight:600; color:#fff; line-height:1.05;
+}
+
+/* Opener backgrounds — all warm */
+.bg-dark  {background:linear-gradient(145deg,#141008,#201808);}
+.bg-teal  {background:linear-gradient(145deg,#1A1006,#2E1E0A);}
+.bg-red   {background:linear-gradient(145deg,#1C0804,#2C1008);}
+.bg-gold  {background:linear-gradient(145deg,#180E04,#301C08);}
+.bg-slate {background:linear-gradient(145deg,#121008,#201808);}
+
+/* ── PAGE BODY ──────────────────────── */
+.pg{padding:18px 13mm 0;}
+
+/* ── FOOTER ─────────────────────────── */
+.pg-foot{
+  position:absolute; bottom:9mm; left:13mm; right:13mm;
+  display:flex; align-items:center;
+  border-top:1px solid var(--rule); padding-top:5px;
+}
+.pf-br{font-size:7px; letter-spacing:2.5px; color:var(--amber); font-weight:700; text-transform:uppercase;}
+.pf-n{
+  margin-left:auto;
+  font-family:'Cormorant Garamond',serif;
+  font-size:14px; font-weight:600; color:var(--mist);
+}
+
+/* ── SECTION LABELS ─────────────────── */
+.lbl{
+  font-size:7px; font-weight:700; letter-spacing:4px;
+  text-transform:uppercase; color:var(--amber);
+  margin-bottom:8px; margin-top:18px;
+  display:flex; align-items:center; gap:10px;
+}
+.lbl::after{content:''; flex:1; height:1px; background:var(--rule);}
+.lbl:first-child{margin-top:0;}
+
+/* ── BODY TEXT ──────────────────────── */
+.bp{
+  font-family:'EB Garamond',serif;
+  font-size:12px; line-height:1.95; color:var(--ink2);
+  text-align:justify; hyphens:none;
+}
+.bp strong{font-weight:600; color:var(--ink);}
+
+/* ── PULL QUOTE ─────────────────────── */
+.pq{
+  border-left:3px solid var(--amber2);
+  padding:12px 16px;
+  background:var(--paper);
+  border-radius:0 6px 6px 0;
+  margin:16px 0;
+}
+.pq p{
+  font-family:'Cormorant Garamond',serif;
+  font-size:17px; font-style:italic; color:var(--ink); line-height:1.55;
+}
+.pq cite{
+  font-size:7.5px; letter-spacing:2px; color:var(--amber);
+  text-transform:uppercase; display:block; margin-top:6px; font-style:normal;
+}
+
+/* ── CALLOUT ────────────────────────── */
+.callout{
+  background:var(--paper);
+  border:1.5px solid var(--card-border);
+  border-left:3px solid var(--amber);
+  border-radius:0 6px 6px 0;
+  padding:11px 14px 10px;
+  margin:12px 0;
+}
+.callout-red {border-left-color:var(--red);}
+.callout-dark{border-left-color:var(--ink3);}
+.callout-gold{border-left-color:var(--amber2);}
+.callout-teal{border-left-color:#3A7060;}
+.callout-head{
+  font-size:7px; font-weight:700; letter-spacing:3px;
+  text-transform:uppercase; color:var(--amber); margin-bottom:6px;
+}
+.callout-red  .callout-head{color:var(--red);}
+.callout-dark .callout-head{color:var(--ink3);}
+.callout-teal .callout-head{color:#3A7060;}
+.callout p,.callout li{
+  font-family:'EB Garamond',serif;
+  font-size:11.5px; color:var(--ink2); line-height:1.80;
+  text-align:justify; hyphens:none;
+}
+
+/* ── TABLES ─────────────────────────── */
+.t{width:100%; border-collapse:collapse; font-size:10px;}
+.t thead tr{background:var(--ink);}
+.t thead th{
+  padding:7px 10px; text-align:left;
+  font-size:7px; letter-spacing:2.5px;
+  font-weight:600; text-transform:uppercase;
+  color:rgba(255,255,255,.60);
+}
+.t tbody tr{border-bottom:1px solid var(--rule2);}
+.t tbody tr:nth-child(odd) {background:var(--page);}
+.t tbody tr:nth-child(even){background:var(--paper);}
+.t td{
+  padding:7px 10px; vertical-align:top;
+  line-height:1.65; color:var(--ink2);
+  font-family:'EB Garamond',serif; font-size:11px;
+  hyphens:none; font-variant-numeric:tabular-nums;
+}
+.t td:first-child{font-weight:600; color:var(--ink);}
+.t.t-amber thead tr{background:#5A3008;}
+.t.t-red   thead tr{background:var(--red2);}
+.t.t-teal  thead tr{background:#1A4840;}
+
+/* ── STEPS ──────────────────────────── */
+.step{
+  display:flex; gap:12px;
+  padding:11px 0;
+  border-bottom:1px solid var(--rule2);
+  align-items:flex-start;
+}
+.step:last-of-type{border-bottom:none;}
+.step-n{
+  font-family:'Cormorant Garamond',serif;
+  font-size:34px; font-weight:700;
+  color:rgba(184,124,8,.30); line-height:1;
+  flex-shrink:0; width:28px; text-align:center;
+  font-variant-numeric:tabular-nums;
+}
+.step-n.key{color:rgba(180,44,20,.32);}
+.step-body h4{
+  font-size:11.5px; font-weight:700; color:var(--ink);
+  margin-bottom:3px; line-height:1.3;
+}
+.step-body p{
+  font-family:'EB Garamond',serif;
+  font-size:11.5px; color:var(--ink2); line-height:1.85;
+  text-align:justify; hyphens:none;
+}
+
+/* Tags */
+.tag{
+  display:inline-block; font-size:7px; font-weight:700;
+  letter-spacing:1.5px; padding:1px 6px;
+  text-transform:uppercase; margin-bottom:4px; color:#fff;
+}
+.tag-key {background:var(--red);}
+.tag-tip {background:var(--amber);}
+.tag-note{background:#3A7060;}
+
+/* ── PHRASE BLOCKS ───────────────────── */
+.ph-block{margin-bottom:11px; border-radius:6px; overflow:hidden; border:1.5px solid var(--card-border);}
+.ph-head{
+  padding:7px 12px 6px;
+  font-size:7.5px; font-weight:700; letter-spacing:3px;
+  text-transform:uppercase; color:rgba(255,255,255,.65);
+  background:var(--ink);
+}
+.ph-body{background:var(--paper); padding:0 12px;}
+.ph-row{padding:7px 0; border-bottom:1px solid var(--rule2);}
+.ph-row:last-child{border:none;}
+.ph-jp{
+  font-family:'EB Garamond',serif;
+  font-size:11.5px; font-style:italic; color:var(--ink2); margin-bottom:1px;
+}
+.ph-es{font-size:10.5px; color:var(--ink); font-weight:600;}
+.ph-note{font-size:8.5px; color:var(--mist); margin-top:2px;}
+
+/* ── DO / DONT ──────────────────────── */
+.dd{border:1.5px solid var(--card-border); border-radius:6px; overflow:hidden;}
+.dd-head{padding:9px 14px;}
+.dd-head h4{
+  font-size:9px; font-weight:700; color:#fff;
+  letter-spacing:2px; text-transform:uppercase;
+}
+.dd-body{background:var(--paper); padding:11px 14px;}
+.dd-list{list-style:none;}
+.dd-list li{
+  font-family:'EB Garamond',serif;
+  font-size:11px; padding:4px 0 4px 16px;
+  position:relative; color:var(--ink2); line-height:1.55;
+  border-bottom:1px solid var(--rule2);
+}
+.dd-list li:last-child{border:none;}
+.do-li::before{content:'○'; position:absolute; left:0; color:#3A7030; font-weight:700;}
+.dn-li::before{content:'×'; position:absolute; left:0; color:var(--red); font-weight:700;}
+
+/* ── SWATCH ─────────────────────────── */
+.sw{display:inline-flex; align-items:center; gap:5px; font-size:10px;}
+.sw-dot{width:10px; height:10px; border-radius:50%; border:1px solid rgba(0,0,0,.14); flex-shrink:0;}
+
+/* ── BADGE ──────────────────────────── */
+.badge{
+  display:inline-block; font-size:7px; font-weight:600;
+  letter-spacing:.5px; padding:1px 5px;
+  text-transform:uppercase; vertical-align:middle; margin-left:4px; color:#fff;
+}
+.badge-r{background:var(--red);}
+.badge-g{background:var(--amber);}
+.badge-t{background:#3A7060;}
+
+/* ── GRIDS ──────────────────────────── */
+.two  {display:grid; grid-template-columns:1fr 1fr; gap:11px;}
+.three{display:grid; grid-template-columns:repeat(3,1fr); gap:9px;}
+.four {display:grid; grid-template-columns:repeat(4,1fr); gap:8px;}
+
+/* ── TILE ───────────────────────────── */
+.tile{
+  background:var(--paper);
+  padding:11px 12px;
+  border:1.5px solid var(--card-border);
+  border-radius:8px;
+  border-top:3px solid var(--ink3);
+}
+.tile-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:15px; font-weight:700; color:var(--ink); margin-bottom:2px;
+}
+.tile-tag{
+  font-size:7px; color:var(--amber);
+  letter-spacing:1.5px; text-transform:uppercase; margin-bottom:5px;
+}
+.tile-desc{
+  font-family:'EB Garamond',serif;
+  font-size:10.5px; color:var(--ink3); line-height:1.65;
+}
+
+/* ── TEMPERATURE CARD ────────────────── */
+.tcard{
+  padding:12px 10px; text-align:center;
+  background:var(--paper);
+  border:1.5px solid var(--card-border);
+  border-radius:8px;
+  border-top:3px solid var(--ink3);
+}
+.tcard-n{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px; font-weight:700; line-height:1; color:var(--ink);
+  font-variant-numeric:tabular-nums;
+}
+.tcard-l{
+  font-size:7.5px; font-weight:700; letter-spacing:1.5px;
+  text-transform:uppercase; color:var(--amber); margin-top:4px;
+}
+.tcard-d{
+  font-family:'EB Garamond',serif;
+  font-size:9.5px; color:var(--ink3); margin-top:6px; line-height:1.6;
+}
+
+/* ── SIGN BOX ───────────────────────── */
+.sign{
+  background:var(--paper); padding:10px 8px;
+  text-align:center;
+  border:1.5px solid var(--card-border);
+  border-radius:8px;
+}
+.sign-k{
+  font-family:'Noto Serif JP','Noto Serif',serif;
+  font-size:26px; font-weight:900; color:var(--ink); line-height:1;
+}
+.sign-e{font-size:8.5px; color:var(--mist); margin-top:4px; line-height:1.4;}
+
+/* ── VOCAB ROW ──────────────────────── */
+.vrow{display:flex; align-items:baseline; gap:8px; padding:5px 0; border-bottom:1px solid var(--rule2);}
+.vrow:last-child{border:none;}
+.vrow-jp{font-size:10px; font-weight:700; color:var(--ink); min-width:95px; flex-shrink:0;}
+.vrow-es{font-family:'EB Garamond',serif; font-size:11px; color:var(--ink2);}
+.vrow-rm{font-size:9px; color:var(--mist); margin-left:auto; white-space:nowrap; font-style:italic;}
+
+/* ── INTERVAL ───────────────────────── */
+.interval{display:flex; align-items:center; gap:6px; flex-wrap:wrap; line-height:2.4;}
+.int-box{padding:5px 12px; font-size:10.5px; font-weight:700; border-radius:4px; white-space:nowrap;}
+.int-arrow{color:var(--warm2); font-size:13px;}
+
+/* ── EFFECT GRID ─────────────────────── */
+.effect-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:7px;}
+
+@media print{
+  body{background:#fff;}
+  .page{margin:0; page-break-after:always;}
+}
+</style>
+</head>
+<body>
+
+
+<!-- PAGE 1 · COVER -->
+<div class="page p-cover">
+  <div class="cv-watermark">温泉</div>
+
+  <div class="cv-top">
+    <div class="cv-top-line"></div>
+    <div class="cv-top-text">Manual de Onsen &nbsp;·&nbsp; Kyushu, Japón &nbsp;·&nbsp; Edición Premium</div>
+    <div class="cv-top-line"></div>
+  </div>
+
+  <div class="cv-main">
+    <div class="cv-eyebrow">Guía completa de baños termales</div>
+    <div class="cv-title">GUÍA<em>Onsen</em></div>
+    <div class="cv-rule"></div>
+    <p class="cv-intro">
+      Cómo bañarse en las aguas termales<br>
+      del Japón auténtico. Historia, ciencia,<br>
+      protocolo y vocabulario.
+    </p>
+    <div class="cv-index">
+      <div class="cv-index-item">10 tipos de agua y su composición geoquímica</div>
+      <div class="cv-index-item">Protocolo completo paso a paso</div>
+      <div class="cv-index-item">Temperatura, salud y método de intervalos</div>
+      <div class="cv-index-item">Vocabulario español–japonés · Frases prácticas</div>
+      <div class="cv-index-item">Guía para personas con tatuajes</div>
+    </div>
+  </div>
+
+  <div class="cv-foot">
+    <div>
+      <div class="cv-author-lbl">Autor &amp; Guía</div>
+      <div class="cv-author-name">Furuta&thinsp;/&thinsp;<span>Fruta</span></div>
+      <div class="cv-author-sub">Residente en Fukuoka &nbsp;·&nbsp; Español conversacional &nbsp;·&nbsp; 63 países visitados</div>
+    </div>
+    <div class="cv-edition">Kyushu, Japón<br>Edición Premium</div>
+  </div>
+
+  <div class="cv-bar"></div>
+</div>
+
+
+<!-- PAGE 2 · ¿QUÉ ES EL ONSEN? -->
+<div class="page">
+  <div class="ch-opener bg-teal">
+    <div class="ch-num-ghost">01</div>
+    <div class="ch-opener-content">
+      <div class="ch-num">Capítulo 01</div>
+      <div class="ch-title">¿Qué es exactamente un onsen?</div>
+    </div>
+  </div>
+
+  <div class="pg">
+    <p class="bp">
+      En Japón, el término <strong>onsen (温泉)</strong> no es un nombre genérico para «baño caliente».
+      Es una denominación legal y científica. Para que un manantial sea reconocido como onsen
+      por el Ministerio de Medio Ambiente japonés, debe cumplir al menos una de estas condiciones:
+      temperatura mínima de <strong>25 °C</strong> al brotar, o presencia de al menos uno de los
+      <strong>19 componentes minerales</strong> específicos en concentración mínima regulada.
+      Un baño de agua caliente del grifo nunca es un onsen.
+    </p>
+
+    <div class="pq">
+      <p>«Japón tiene más de 27.000 fuentes termales certificadas —
+        aproximadamente el 25 % de todas las existentes en el mundo.
+        Y la mayoría de las mejores están a menos de dos horas de Fukuoka.»</p>
+      <cite>— Furuta · Guía de Kyushu en español</cite>
+    </div>
+
+    <div class="lbl">Tipos de establecimiento termal</div>
+    <table class="t" style="margin-bottom:14px;">
+      <thead>
+        <tr><th>Tipo</th><th>Descripción</th><th>Agua natural</th><th>Precio aprox.</th><th>Ideal para</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Onsen de ryokan<br><span style="font-size:8.5px;color:var(--mist);">旅館温泉</span></td>
+          <td>Hotel tradicional japonés. Baño privado o comunitario incluido.</td>
+          <td style="color:#3A7030;font-weight:600;">Siempre</td>
+          <td>15,000–80,000 ¥/noche</td>
+          <td>Experiencia completa</td>
+        </tr>
+        <tr>
+          <td>Higaeri nyūyoku<br><span style="font-size:8.5px;color:var(--mist);">日帰り入浴</span></td>
+          <td>Visita de día a un ryokan sin alojamiento. Solo el baño.</td>
+          <td style="color:#3A7030;font-weight:600;">Siempre</td>
+          <td>500–3,500 ¥</td>
+          <td>Visitas rápidas</td>
+        </tr>
+        <tr>
+          <td>Kashikiri-buro<br><span style="font-size:8.5px;color:var(--mist);">貸切風呂</span></td>
+          <td>Baño privado alquilado por horas. Uso completamente exclusivo.</td>
+          <td style="color:#3A7030;font-weight:600;">Siempre</td>
+          <td>2,000–8,000 ¥/hora</td>
+          <td>Pareja, tatuados</td>
+        </tr>
+        <tr>
+          <td>Onsen público<br><span style="font-size:8.5px;color:var(--mist);">共同浴場</span></td>
+          <td>Baño comunitario municipal. Muy auténtico. Locales habituales.</td>
+          <td style="color:#3A7030;font-weight:600;">Casi siempre</td>
+          <td>100–500 ¥</td>
+          <td>Inmersión cultural</td>
+        </tr>
+        <tr>
+          <td>Sentō<br><span style="font-size:8.5px;color:var(--mist);">銭湯</span></td>
+          <td>Baño público urbano. El agua puede no ser termal natural.</td>
+          <td style="color:var(--mist);">Variable</td>
+          <td>450–600 ¥</td>
+          <td>Vida cotidiana japonesa</td>
+        </tr>
+        <tr>
+          <td>Supā sentō<br><span style="font-size:8.5px;color:var(--mist);">スーパー銭湯</span></td>
+          <td>Gran complejo con jacuzzi, sauna, restaurante y descanso.</td>
+          <td style="color:var(--mist);">Variable</td>
+          <td>900–2,200 ¥</td>
+          <td>Día completo en familia</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="lbl">Tipos de bañera</div>
+    <div class="three" style="margin-bottom:13px;">
+      <div class="tile" style="border-top-color:var(--amber2);">
+        <div class="tile-name">Rotenburo</div>
+        <div class="tile-tag">露天風呂 · Exterior</div>
+        <div class="tile-desc">Al aire libre. La quintaesencia del onsen: naturaleza, cielo y agua termal.</div>
+      </div>
+      <div class="tile">
+        <div class="tile-name">Uchiyu</div>
+        <div class="tile-tag">内湯 · Interior</div>
+        <div class="tile-desc">Cubierto, con ducha. Funciona todo el año. Ideal para principiantes.</div>
+      </div>
+      <div class="tile" style="border-top-color:var(--red);">
+        <div class="tile-name">Kashikiri</div>
+        <div class="tile-tag">貸切 · Privado</div>
+        <div class="tile-desc">Uso exclusivo por tiempo. Sin restricciones de tatuajes. Máxima privacidad.</div>
+      </div>
+      <div class="tile">
+        <div class="tile-name">Sauna</div>
+        <div class="tile-tag">サウナ · Sauna</div>
+        <div class="tile-desc">70–100 °C. Ciclo sauna → baño frío → reposo. El estado «totonoi».</div>
+      </div>
+      <div class="tile" style="border-top-color:var(--amber);">
+        <div class="tile-name">Ashiyu</div>
+        <div class="tile-tag">足湯 · Baño de pies</div>
+        <div class="tile-desc">Solo los pies, con ropa puesta. Gratis en muchos sitios públicos.</div>
+      </div>
+      <div class="tile">
+        <div class="tile-name">Utase-yu</div>
+        <div class="tile-tag">打たせ湯 · Cascada</div>
+        <div class="tile-desc">Agua que cae desde arriba. Masaje natural sobre hombros y espalda.</div>
+      </div>
+    </div>
+
+    <div class="callout callout-gold">
+      <div class="callout-head">Criterio de Furuta para elegir establecimiento</div>
+      <p>Primera visita: <strong>uchiyu en ryokan con servicio de día</strong>. Privacidad o tatuajes: <strong>kashikiri-buro</strong>. Experiencia auténtica: <strong>onsen público comunitario</strong>. Experiencia completa: ryokan con rotenburo propio.</p>
+    </div>
+  </div>
+
+  <div class="pg-foot"><span class="pf-br">Onsen con Fruta · Guía Premium</span><span class="pf-n">02</span></div>
+</div>
+
+
+<!-- PAGE 3 · LOS 10 TIPOS DE AGUA -->
+<div class="page">
+  <div class="ch-opener bg-red">
+    <div class="ch-num-ghost">02</div>
+    <div class="ch-opener-content">
+      <div class="ch-num">Capítulo 02</div>
+      <div class="ch-title">Los 10 tipos de agua — La ciencia del senshu</div>
+    </div>
+  </div>
+
+  <div class="pg">
+    <p class="bp" style="margin-bottom:14px;">
+      Kyushu concentra los <strong>10 tipos de agua termal</strong> reconocidos por el gobierno japonés
+      — la única región en el mundo que los reúne todos. Islandia tiene 2–3, Nueva Zelanda 2, Italia 3.
+      La diversidad geoquímica de Kyushu es singularmente irrepetible.
+    </p>
+
+    <table class="t t-red">
+      <thead>
+        <tr>
+          <th>Tipo de agua</th>
+          <th>Color / aspecto</th>
+          <th>Componente activo</th>
+          <th>Beneficios terapéuticos</th>
+          <th>Singularidad</th>
+          <th>Zona</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sulfurosas<br><span style="font-size:8px;color:var(--mist);">硫黄泉</span></td>
+          <td><div class="sw"><div class="sw-dot" style="background:#DED8A8;border-color:#B8A820;"></div>Blanco lechoso</div></td>
+          <td>Azufre (H₂S)</td>
+          <td>Eccema, psoriasis, arteriosclerosis</td>
+          <td><span class="badge badge-r">Raro</span></td>
+          <td>Beppu, Unzen, Aso</td>
+        </tr>
+        <tr>
+          <td>Ferruginosas<br><span style="font-size:8px;color:var(--mist);">含鉄泉</span></td>
+          <td><div class="sw"><div class="sw-dot" style="background:#A02818;"></div>Rojo / marrón</div></td>
+          <td>Hierro (Fe²⁺/Fe³⁺)</td>
+          <td>Anemia, ginecología, circulación</td>
+          <td><span class="badge badge-r">Ultra raro</span></td>
+          <td>Chinoike Jigoku</td>
+        </tr>
+        <tr>
+          <td>Carbónicas<br><span style="font-size:8px;color:var(--mist);">二酸化炭素泉</span></td>
+          <td><div class="sw"><div class="sw-dot" style="background:#B0D8A8;border-color:#3A8028;"></div>Incolora, CO₂</div></td>
+          <td>CO₂ disuelto</td>
+          <td>Hipertensión, enf. cardíacas, circulación</td>
+          <td><span class="badge badge-r">Raro</span></td>
+          <td>Nagayu, Taketa</td>
+        </tr>
+        <tr>
+          <td>Cloruradas<br><span style="font-size:8px;color:var(--mist);">塩化物泉</span></td>
+          <td><div class="sw"><div class="sw-dot" style="background:#B8D4F0;border-color:#2870A8;"></div>Incolora</div></td>
+          <td>NaCl, CaCl₂</td>
+          <td>Neuralgia, artritis, heridas</td>
+          <td>—</td>
+          <td>Fukuoka, región</td>
+        </tr>
+        <tr>
+          <td>Barro termal<br><span style="font-size:8px;color:var(--mist);">含泥泉</span></td>
+          <td><div class="sw"><div class="sw-dot" style="background:#7A5012;"></div>Gris-marrón espeso</div></td>
+          <td>Arcilla + azufre</td>
+          <td>Belleza, desintox., articulaciones</td>
+          <td><span class="badge badge-r">Raro</span></td>
+          <td>Oniyama Jigoku</td>
+        </tr>
+        <tr>
+          <td>Ácidas<br><span style="font-size:8px;color:var(--mist);">酸性泉</span></td>
+          <td><div class="sw"><div class="sw-dot" style="background:#E0D070;border-color:#C0A010;"></div>Amarillo, pH &lt;3</div></td>
+          <td>H₂SO₄, HCl</td>
+          <td>Piel crónica, pie de atleta</td>
+          <td><span class="badge badge-r">Raro</span></td>
+          <td>Myōban, Beppu</td>
+        </tr>
+        <tr>
+          <td>Alcalinas simples<br><span style="font-size:8px;color:var(--mist);">アルカリ性単純温泉</span></td>
+          <td><div class="sw"><div class="sw-dot" style="background:#E0D8F0;border-color:#8040A0;"></div>Incolora, resbaladiza</div></td>
+          <td>NaHCO₃, pH &gt;8.5</td>
+          <td>«El agua de la belleza» — piel suave</td>
+          <td>—</td>
+          <td>Yufuin, Kurokawa</td>
+        </tr>
+        <tr>
+          <td>Bicarbonatadas<br><span style="font-size:8px;color:var(--mist);">炭酸水素塩泉</span></td>
+          <td><div class="sw"><div class="sw-dot" style="background:#C4E8C0;border-color:#388030;"></div>Verde pálido</div></td>
+          <td>NaHCO₃, Ca(HCO₃)₂</td>
+          <td>Piel limpia, edemas, diabetes leve</td>
+          <td>—</td>
+          <td>Toda Kyushu</td>
+        </tr>
+        <tr>
+          <td>Sulfatadas<br><span style="font-size:8px;color:var(--mist);">硫酸塩泉</span></td>
+          <td><div class="sw"><div class="sw-dot" style="background:#D4DCF0;border-color:#506080;"></div>Incolora</div></td>
+          <td>Na₂SO₄, CaSO₄</td>
+          <td>«El agua de las heridas» — neuralgia</td>
+          <td>—</td>
+          <td>Ureshino, Takeo</td>
+        </tr>
+        <tr>
+          <td>Radiactivas (radón)<br><span style="font-size:8px;color:var(--mist);">放射能泉</span></td>
+          <td><div class="sw"><div class="sw-dot" style="background:#D0F0D0;border-color:#286028;"></div>Incolora</div></td>
+          <td>Rn (radón)</td>
+          <td>Gota, hipertensión, artritis reumatoide</td>
+          <td><span class="badge badge-t">Singular</span></td>
+          <td>Takeo</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout callout-gold" style="margin-top:13px;">
+      <div class="callout-head">Cómo reconocer el agua al entrar</div>
+      <p><strong>Blanca lechosa:</strong> sulfurosa. <strong>Roja o marrón:</strong> ferruginosa. <strong>Burbujas en la piel:</strong> carbónica. <strong>Resbaladiza:</strong> alcalina. <strong>Amarillenta y algo picante:</strong> ácida. <strong>Espesa y gris:</strong> barro. Incolora y sin olor: clorurada, sulfatada o bicarbonatada.</p>
+    </div>
+  </div>
+
+  <div class="pg-foot"><span class="pf-br">Onsen con Fruta · Guía Premium</span><span class="pf-n">03</span></div>
+</div>
+
+
+<!-- PAGE 4 · PROTOCOLO — LOS 7 PASOS -->
+<div class="page">
+  <div class="ch-opener bg-teal">
+    <div class="ch-num-ghost">03</div>
+    <div class="ch-opener-content">
+      <div class="ch-num">Capítulo 03</div>
+      <div class="ch-title">Protocolo completo — Los 7 pasos del onsen</div>
+    </div>
+  </div>
+
+  <div class="pg">
+    <p class="bp" style="margin-bottom:11px;">
+      Lo que más desorienta al visitante primerizo no es el idioma ni el precio: es no saber
+      cómo moverse. Este es el flujo real, desde la puerta de entrada hasta la sala de descanso.
+    </p>
+
+    <div class="lbl">El flujo completo — de la entrada al descanso</div>
+
+    <div class="step">
+      <div class="step-n">1</div>
+      <div class="step-body">
+        <span class="tag tag-tip">Entrada</span>
+        <h4>Quítate los zapatos en la entrada</h4>
+        <p>En la entrada hay casilleros de calzado. Guarda los zapatos y lleva la llave contigo. Es costumbre en todo establecimiento japonés.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">2</div>
+      <div class="step-body">
+        <span class="tag tag-tip">Pago</span>
+        <h4>Recepción o máquina de tickets</h4>
+        <p>Paga en la recepción (uketsuke / 受付) o compra un ticket en la máquina. Si no entiendes la máquina: <strong>«One ticket, please»</strong> funciona en todos los onsen. Di <em>«Otona hitori, nyūyoku dake»</em> (una persona adulta, solo baño) en la recepción de un ryokan.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">3</div>
+      <div class="step-body">
+        <span class="tag tag-note">Atención</span>
+        <h4>Confirma la entrada correcta — <strong style="font-size:13px;font-family:'Noto Serif JP',serif;">男</strong> hombres / <strong style="font-size:13px;font-family:'Noto Serif JP',serif;">女</strong> mujeres</h4>
+        <p>Busca los letreros: <strong>男</strong> (otoko, hombres) y <strong>女</strong> (onna, mujeres). Algunos onsen rotan los baños según el día: comprueba siempre el letrero de la jornada.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">4</div>
+      <div class="step-body">
+        <span class="tag tag-tip">Vestuario</span>
+        <h4>Datsuijo (脱衣所) — desvístete completamente</h4>
+        <p>En Japón se entra al onsen sin ninguna prenda. Dobla la ropa y guárdala en la taquilla con llave. Lleva solo la toalla pequeña. <strong>Sin smartphone en el área de baño.</strong> Quítate las joyas de plata (el azufre las ennegrece), el reloj metálico y las lentes de contacto.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n key">!</div>
+      <div class="step-body">
+        <span class="tag tag-key">Regla número uno</span>
+        <h4>Araiba (洗い場) — lávate antes de entrar a la bañera, siempre, sin excepción</h4>
+        <p>Siéntate en el taburete bajo. Lávate con gel y champú a baja presión para no salpicar al vecino. Viértete agua termal (kakeyu) de pies a nuca antes de entrar. El jabón nunca llega a la bañera. Al terminar, enjuaga tu espacio con el cubo.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">6</div>
+      <div class="step-body">
+        <span class="tag tag-tip">Baño</span>
+        <h4>Entra despacio — 10 a 15 minutos por sesión</h4>
+        <p>Sin salpicar. Toalla fuera del agua o doblada sobre la cabeza. Voz muy baja. Si sientes mareos (nobose), sal con calma y siéntate en el borde con los pies fuera del agua.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">7</div>
+      <div class="step-body">
+        <span class="tag tag-note">Descanso</span>
+        <h4>Sal, bebe agua y descansa</h4>
+        <p>El método japonés: <strong>entrar → descansar → entrar</strong>. 2–3 ciclos con 5–8 minutos de reposo producen más beneficio que un baño continuo. Bebe 500 ml antes de salir del establecimiento.</p>
+      </div>
+    </div>
+
+    <div class="callout callout-red" style="margin-top:11px;">
+      <div class="callout-head">Acciones absolutamente prohibidas</div>
+      <div class="two" style="gap:8px;">
+        <ul style="list-style:none;padding:0;">
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:3px 0 3px 18px;position:relative;color:var(--ink2);border-bottom:1px solid var(--rule2);line-height:1.55;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">✕</span>Entrar a la bañera sin lavarse el cuerpo</li>
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:3px 0 3px 18px;position:relative;color:var(--ink2);border-bottom:1px solid var(--rule2);line-height:1.55;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">✕</span>Meter la toalla o ropa dentro de la bañera</li>
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:3px 0 3px 18px;position:relative;color:var(--ink2);line-height:1.55;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">✕</span>Hacer fotos o grabar vídeos (absolutamente prohibido)</li>
+        </ul>
+        <ul style="list-style:none;padding:0;">
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:3px 0 3px 18px;position:relative;color:var(--ink2);border-bottom:1px solid var(--rule2);line-height:1.55;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">✕</span>Hablar en voz alta, gritar o reír fuerte</li>
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:3px 0 3px 18px;position:relative;color:var(--ink2);border-bottom:1px solid var(--rule2);line-height:1.55;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">✕</span>Permanecer más de 15 minutos continuos</li>
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:3px 0 3px 18px;position:relative;color:var(--ink2);line-height:1.55;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">✕</span>Entrar habiendo consumido alcohol</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="pg-foot"><span class="pf-br">Onsen con Fruta · Guía Premium</span><span class="pf-n">04</span></div>
+</div>
+
+
+<!-- PAGE 5 · PROTOCOLO — EN LA BAÑERA Y SALIDA -->
+<div class="page">
+  <div class="ch-opener bg-teal">
+    <div class="ch-num-ghost">03</div>
+    <div class="ch-opener-content">
+      <div class="ch-num">Capítulo 03 — continuación</div>
+      <div class="ch-title">Dentro de la bañera y al salir</div>
+    </div>
+  </div>
+
+  <div class="pg">
+    <div class="step">
+      <div class="step-n">1</div>
+      <div class="step-body">
+        <span class="tag tag-tip">Entrada</span>
+        <h4>Entra despacio, sin salpicar</h4>
+        <p>Siéntate en el borde exterior unos segundos, introduce los pies, luego las piernas. Si el agua está a más de 43 °C, baja gradualmente para que el cuerpo se adapte.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">2</div>
+      <div class="step-body">
+        <span class="tag tag-tip">Toalla</span>
+        <h4>La toalla va doblada sobre la cabeza o fuera del agua</h4>
+        <p>Nunca la sumerjas ni la pongas a flotar. Doblada sobre la cabeza también refresca la nuca y reduce el riesgo de mareos.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">3</div>
+      <div class="step-body">
+        <span class="tag tag-tip">Silencio</span>
+        <h4>Voz muy baja — el onsen no es una piscina</h4>
+        <p>La conversación es bienvenida pero en tono íntimo. La frase <strong>«Ii yu desu ne»</strong> (¡Qué agua tan buena!) es el saludo perfecto con alguien desconocido en la bañera.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">4</div>
+      <div class="step-body">
+        <span class="tag tag-note">Tiempo</span>
+        <h4>10–15 minutos por sesión</h4>
+        <p>La primera vez, no superes los 10 minutos continuos. El método más eficaz es hacer 2–3 ciclos de baño con descanso entre ellos (ver Capítulo 04).</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">5</div>
+      <div class="step-body">
+        <span class="tag tag-tip">Mareo</span>
+        <h4>Si sientes «nobose» — sal y siéntate en el borde</h4>
+        <p>El mareo por calor es normal en la primera visita. Sal calmadamente, siéntate con los pies fuera. Si continúa, ve al vestuario y bebe agua.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">6</div>
+      <div class="step-body">
+        <span class="tag tag-note">Salida</span>
+        <h4>¿Enjuagar o no? Depende del agua</h4>
+        <p><strong>Sulfurosas, alcalinas y bicarbonatadas — no enjuagar</strong> (los minerales siguen actuando). <strong>Ácidas, ferruginosas y barro — sí enjuagar</strong> con agua tibia. Bebe 500 ml antes de salir del establecimiento.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-n">7</div>
+      <div class="step-body">
+        <span class="tag tag-note">Reposo</span>
+        <h4>20–30 minutos de reposo obligatorio</h4>
+        <p>Muchos onsen tienen kyūkei-shitsu (sala de descanso). Evita esfuerzo físico o alcohol. La secuencia óptima: baño → reposo breve → sueño.</p>
+      </div>
+    </div>
+
+    <div class="callout callout-dark" style="margin-top:14px;">
+      <div class="callout-head">Resumen del protocolo</div>
+      <div style="display:flex;gap:5px;flex-wrap:wrap;align-items:center;font-size:9.5px;line-height:2.4;">
+        <span style="background:var(--ink);color:#fff;padding:3px 9px;border-radius:4px;font-weight:600;">① Pago</span>
+        <span style="color:var(--warm2);">→</span>
+        <span style="background:var(--ink);color:#fff;padding:3px 9px;border-radius:4px;font-weight:600;">② Desnudarse</span>
+        <span style="color:var(--warm2);">→</span>
+        <span style="background:var(--red);color:#fff;padding:3px 9px;border-radius:4px;font-weight:600;">③ Kakeyu</span>
+        <span style="color:var(--warm2);">→</span>
+        <span style="background:var(--ink);color:#fff;padding:3px 9px;border-radius:4px;font-weight:600;">④ Lavado</span>
+        <span style="color:var(--warm2);">→</span>
+        <span style="background:var(--amber);color:#fff;padding:3px 9px;border-radius:4px;font-weight:600;">⑤ Baño 10–15 min</span>
+        <span style="color:var(--warm2);">→</span>
+        <span style="background:var(--warm2);color:var(--ink);padding:3px 9px;border-radius:4px;font-weight:600;border:1px solid var(--warm);">⑥ Descanso</span>
+        <span style="color:var(--warm2);">→</span>
+        <span style="background:var(--amber);color:#fff;padding:3px 9px;border-radius:4px;font-weight:600;">⑦ Baño 10–15 min</span>
+        <span style="color:var(--warm2);">→</span>
+        <span style="background:var(--ink);color:#fff;padding:3px 9px;border-radius:4px;font-weight:600;">⑧ Hidratación</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="pg-foot"><span class="pf-br">Onsen con Fruta · Guía Premium</span><span class="pf-n">05</span></div>
+</div>
+
+
+<!-- PAGE 6 · TEMPERATURA, TIEMPO Y SALUD -->
+<div class="page">
+  <div class="ch-opener bg-gold">
+    <div class="ch-num-ghost">04</div>
+    <div class="ch-opener-content">
+      <div class="ch-num">Capítulo 04</div>
+      <div class="ch-title">Temperatura, tiempo de baño y seguridad médica</div>
+    </div>
+  </div>
+
+  <div class="pg">
+    <div class="lbl">Guía de temperaturas</div>
+    <div class="four" style="margin-bottom:15px;">
+      <div class="tcard" style="border-top-color:#4888C0;">
+        <div class="tcard-n" style="color:#1A4880;">38–39 °C</div>
+        <div class="tcard-l">Templada</div>
+        <div class="tcard-d">Mayores, niños y principiantes. Mínimo impacto cardiovascular. Hasta 30 min.</div>
+      </div>
+      <div class="tcard" style="border-top-color:var(--amber);">
+        <div class="tcard-n" style="color:#806000;">40–41 °C</div>
+        <div class="tcard-l">Ideal</div>
+        <div class="tcard-d">Estándar japonés. Activa la circulación y el sistema parasimpático. Máxima eficacia.</div>
+      </div>
+      <div class="tcard" style="border-top-color:#C06020;">
+        <div class="tcard-n" style="color:#803800;">42–43 °C</div>
+        <div class="tcard-l">Caliente</div>
+        <div class="tcard-d">Activa metabolismo y sudoración. Máximo 10 minutos. Hidratación inmediata.</div>
+      </div>
+      <div class="tcard" style="border-top-color:var(--red);">
+        <div class="tcard-n" style="color:var(--red2);">44 °C +</div>
+        <div class="tcard-l">Muy caliente</div>
+        <div class="tcard-d">Solo experimentados. Entrada gradual obligatoria. Máximo 5 minutos.</div>
+      </div>
+    </div>
+
+    <div class="lbl">Método por intervalos — el protocolo más eficaz</div>
+    <div style="background:var(--paper);border:1.5px solid var(--card-border);border-left:3px solid var(--red);border-radius:0 6px 6px 0;padding:13px 16px;margin-bottom:15px;">
+      <div class="interval">
+        <span class="int-box" style="background:var(--ink);color:#fff;">Baño 10–12 min</span>
+        <span class="int-arrow">→</span>
+        <span class="int-box" style="background:var(--warm);color:var(--ink);border:1px solid var(--warm2);">Descanso 5–8 min<br><span style="font-size:8.5px;color:var(--mist);font-weight:400;">(beber agua)</span></span>
+        <span class="int-arrow">→</span>
+        <span class="int-box" style="background:var(--ink);color:#fff;">Baño 10–12 min</span>
+        <span class="int-arrow">→</span>
+        <span class="int-box" style="background:var(--warm);color:var(--ink);border:1px solid var(--warm2);">Descanso 5–8 min</span>
+        <span class="int-arrow">→</span>
+        <span class="int-box" style="background:var(--ink);color:#fff;">Baño 10 min</span>
+        <span class="int-arrow">→</span>
+        <span class="int-box" style="background:var(--amber);color:#fff;">Fin + 30 min reposo</span>
+      </div>
+      <div style="font-size:9.5px;color:var(--mist);margin-top:9px;line-height:1.65;font-family:'EB Garamond',serif;">2–3 ciclos producen mayores beneficios que un baño continuo. Los japoneses llevan este ritmo de forma instintiva.</div>
+    </div>
+
+    <div class="two" style="margin-bottom:14px;">
+      <div class="callout callout-red" style="margin:0;">
+        <div class="callout-head">Cuándo no bañarse</div>
+        <ul style="list-style:none;padding:0;">
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:3px 0 3px 14px;position:relative;color:var(--ink2);border-bottom:1px solid var(--rule2);line-height:1.55;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">×</span>Después de beber alcohol</li>
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:3px 0 3px 14px;position:relative;color:var(--ink2);border-bottom:1px solid var(--rule2);line-height:1.55;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">×</span>30 min tras una comida</li>
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:3px 0 3px 14px;position:relative;color:var(--ink2);border-bottom:1px solid var(--rule2);line-height:1.55;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">×</span>Después de ejercicio intenso</li>
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:3px 0 3px 14px;position:relative;color:var(--ink2);border-bottom:1px solid var(--rule2);line-height:1.55;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">×</span>Con fiebre o infección activa</li>
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:3px 0 3px 14px;position:relative;color:var(--ink2);border-bottom:1px solid var(--rule2);line-height:1.55;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">×</span>Primer trimestre de embarazo</li>
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:3px 0 3px 14px;position:relative;color:var(--ink2);line-height:1.55;"><span style="position:absolute;left:0;color:var(--red);font-weight:700;">×</span>Crisis de hipertensión activa</li>
+        </ul>
+      </div>
+      <div class="callout callout-teal" style="margin:0;">
+        <div class="callout-head">Si te mareas (nobose)</div>
+        <ol style="list-style:none;padding:0;">
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:3px 0 3px 18px;position:relative;color:var(--ink2);border-bottom:1px solid var(--rule2);line-height:1.55;"><span style="position:absolute;left:0;color:#3A7060;font-weight:700;">1.</span>Sal calmadamente, sin brusquedad</li>
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:3px 0 3px 18px;position:relative;color:var(--ink2);border-bottom:1px solid var(--rule2);line-height:1.55;"><span style="position:absolute;left:0;color:#3A7060;font-weight:700;">2.</span>Siéntate con los pies fuera del agua</li>
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:3px 0 3px 18px;position:relative;color:var(--ink2);border-bottom:1px solid var(--rule2);line-height:1.55;"><span style="position:absolute;left:0;color:#3A7060;font-weight:700;">3.</span>Bebe agua despacio, sorbo a sorbo</li>
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:3px 0 3px 18px;position:relative;color:var(--ink2);border-bottom:1px solid var(--rule2);line-height:1.55;"><span style="position:absolute;left:0;color:#3A7060;font-weight:700;">4.</span>Enfría frente y nuca con toalla fría</li>
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:3px 0 3px 18px;position:relative;color:var(--ink2);border-bottom:1px solid var(--rule2);line-height:1.55;"><span style="position:absolute;left:0;color:#3A7060;font-weight:700;">5.</span>Si no mejora en 5 min: túmbate en vestuario</li>
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:3px 0 3px 18px;position:relative;color:var(--ink2);line-height:1.55;"><span style="position:absolute;left:0;color:#3A7060;font-weight:700;">6.</span>Si persiste: pide ayuda al personal</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="lbl">Cuidado post-baño según el tipo de agua</div>
+    <table class="t t-amber">
+      <thead>
+        <tr><th>Tipo de agua</th><th>¿Enjuagar al salir?</th><th>Cuidado especial</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Sulfurosa</td><td style="color:#3A7030;font-weight:600;">No — dejar actuar</td><td>Quitar metales antes. Hidratar. La ropa puede absorber olor.</td></tr>
+        <tr><td>Ferruginosa</td><td>Enjuague suave</td><td>Cuidado con ropa blanca: puede teñirse. Crema hidratante inmediata.</td></tr>
+        <tr><td>Ácida</td><td style="color:var(--red);font-weight:600;">Sí — obligatorio</td><td>Agua agresiva para piel. Pieles sensibles: máx. 5 min.</td></tr>
+        <tr><td>Alcalina (美人の湯)</td><td style="color:#3A7030;font-weight:600;">No — el «mochi» es positivo</td><td>Dormir sin enjuagar = piel notablemente más suave al despertar.</td></tr>
+        <tr><td>Barro</td><td>Enjuague con agua tibia</td><td>Aclarar bien. El calor del barro permanece 20–30 min después.</td></tr>
+        <tr><td>Carbónica</td><td style="color:#3A7030;font-weight:600;">No — potencia el efecto</td><td>Las burbujas en piel dilatan capilares. El efecto dura 20 min más.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pg-foot"><span class="pf-br">Onsen con Fruta · Guía Premium</span><span class="pf-n">06</span></div>
+</div>
+
+
+<!-- PAGE 7 · ETIQUETA COMPLETA -->
+<div class="page">
+  <div class="ch-opener bg-slate">
+    <div class="ch-num-ghost">05</div>
+    <div class="ch-opener-content">
+      <div class="ch-num">Capítulo 05</div>
+      <div class="ch-title">Etiqueta — Las reglas del espacio compartido</div>
+    </div>
+  </div>
+
+  <div class="pg">
+    <p class="bp" style="margin-bottom:13px;">
+      Cada norma del onsen tiene una razón práctica o cultural detrás.
+      No son caprichos: son el resultado de siglos de convivencia en un espacio íntimo compartido.
+      Entenderlas transforma la experiencia de algo incómodo en algo profundamente cómodo.
+    </p>
+
+    <div class="two" style="margin-bottom:14px;">
+      <div class="dd">
+        <div class="dd-head" style="background:#1A4010;"><h4>Lo que debes hacer</h4></div>
+        <div class="dd-body">
+          <ul class="dd-list">
+            <li class="do-li">Hacer el kakeyu sin excepciones, siempre</li>
+            <li class="do-li">Recogerte el pelo largo antes de entrar</li>
+            <li class="do-li">Toalla fuera del agua o en la cabeza</li>
+            <li class="do-li">Hablar en voz muy baja o en susurros</li>
+            <li class="do-li">Limpiar tu espacio de ducha al terminar</li>
+            <li class="do-li">Beber agua antes, durante y después</li>
+            <li class="do-li">Pedir permiso al pasar cerca de alguien</li>
+            <li class="do-li">Decir «Ii yu desu ne» como saludo</li>
+            <li class="do-li">Dejar el vestuario ordenado al salir</li>
+          </ul>
+        </div>
+      </div>
+      <div class="dd">
+        <div class="dd-head" style="background:var(--red2);"><h4>Lo que no debes hacer</h4></div>
+        <div class="dd-body">
+          <ul class="dd-list">
+            <li class="dn-li">Entrar con bañador, ropa o toalla sumergida</li>
+            <li class="dn-li">Meter jabón o espuma en la bañera</li>
+            <li class="dn-li">Salpicar, moverse bruscamente o correr</li>
+            <li class="dn-li">Hablar en voz alta, gritar o reír fuerte</li>
+            <li class="dn-li">Hacer fotos o vídeos (absolutamente prohibido)</li>
+            <li class="dn-li">Entrar habiendo bebido alcohol</li>
+            <li class="dn-li">Ocupar la ducha durante largo tiempo</li>
+            <li class="dn-li">Introducir comida o bebida al área de baño</li>
+            <li class="dn-li">Tocar a otras personas sin consentimiento</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="lbl">Situaciones especiales</div>
+    <div class="two" style="margin-bottom:13px;">
+      <div style="background:var(--paper);padding:12px 14px;border:1.5px solid var(--card-border);border-top:3px solid var(--red);border-radius:0 6px 6px 0;">
+        <div style="font-size:9px;font-weight:700;color:var(--red);margin-bottom:7px;letter-spacing:1px;text-transform:uppercase;">Baños mixtos (kon'yoku / 混浴)</div>
+        <p style="font-family:'EB Garamond',serif;font-size:10.5px;color:var(--ink2);line-height:1.78;">Tradición antigua. En algunos se permite que las mujeres entren con una toalla fina (<em>yu-maki</em>). La clave es la discreción y el respeto visual. En muchos onsen rurales de Kyushu, el baño mixto es la única opción disponible por las noches.</p>
+      </div>
+      <div style="background:var(--paper);padding:12px 14px;border:1.5px solid var(--card-border);border-top:3px solid var(--amber);border-radius:0 6px 6px 0;">
+        <div style="font-size:9px;font-weight:700;color:var(--amber);margin-bottom:7px;letter-spacing:1px;text-transform:uppercase;">Aguas muy calientes — entrada gradual</div>
+        <p style="font-family:'EB Garamond',serif;font-size:10.5px;color:var(--ink2);line-height:1.78;">Para bañeras de 44 °C+: <strong>(1)</strong> moja los pies 2 min. <strong>(2)</strong> Hasta las rodillas 2 min. <strong>(3)</strong> Hasta la cintura 2 min. <strong>(4)</strong> Inmersión hasta el pecho. Este proceso tarda 6–8 min pero evita el shock térmico.</p>
+      </div>
+    </div>
+
+    <div class="lbl">Interacción con locales</div>
+    <p class="bp" style="margin-bottom:12px;">
+      Si muestras que conoces y respetas las normas, es frecuente que los japoneses
+      inicien conversación. La frase más efectiva es <strong>«Ii yu desu ne»</strong> —
+      pronunciada con una ligera inclinación de cabeza y una sonrisa.
+    </p>
+
+    <div class="callout callout-teal">
+      <div class="callout-head">Frases sociales del onsen</div>
+      <div class="two" style="gap:8px;">
+        <div>
+          <div style="font-family:'EB Garamond',serif;font-size:10.5px;margin-bottom:6px;line-height:1.8;"><strong>「いい湯ですね」</strong> <em style="color:var(--mist);font-size:9px;">Ii yu desu ne</em><br><span style="color:var(--ink3);">¡Qué agua tan buena! — el cumplido universal</span></div>
+          <div style="font-family:'EB Garamond',serif;font-size:10.5px;line-height:1.8;"><strong>「失礼します」</strong> <em style="color:var(--mist);font-size:9px;">Shitsurei shimasu</em><br><span style="color:var(--ink3);">Con permiso — al pasar cerca</span></div>
+        </div>
+        <div>
+          <div style="font-family:'EB Garamond',serif;font-size:10.5px;margin-bottom:6px;line-height:1.8;"><strong>「ありがとうございました」</strong> <em style="color:var(--mist);font-size:9px;">Arigatō gozaimashita</em><br><span style="color:var(--ink3);">Muchas gracias — al salir</span></div>
+          <div style="font-family:'EB Garamond',serif;font-size:10.5px;line-height:1.8;"><strong>「気分が悪いです」</strong> <em style="color:var(--mist);font-size:9px;">Kibun ga warui desu</em><br><span style="color:var(--ink3);">No me siento bien — en caso de mareo</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pg-foot"><span class="pf-br">Onsen con Fruta · Guía Premium</span><span class="pf-n">07</span></div>
+</div>
+
+
+<!-- PAGE 8 · VOCABULARIO COMPLETO -->
+<div class="page">
+  <div class="ch-opener bg-dark">
+    <div class="ch-num-ghost">06</div>
+    <div class="ch-opener-content">
+      <div class="ch-num">Capítulo 06</div>
+      <div class="ch-title">Vocabulario completo español–japonés</div>
+    </div>
+  </div>
+
+  <div class="pg">
+    <div class="two" style="gap:13px;margin-bottom:13px;">
+      <div>
+        <div class="lbl" style="margin-top:0;">Instalaciones y zonas</div>
+        <div style="background:var(--paper);border:1.5px solid var(--card-border);border-radius:6px;padding:9px 12px;">
+          <div class="vrow"><span class="vrow-jp">温泉</span><span class="vrow-es">Aguas termales / onsen</span><span class="vrow-rm">onsen</span></div>
+          <div class="vrow"><span class="vrow-jp">露天風呂</span><span class="vrow-es">Baño al aire libre</span><span class="vrow-rm">rotenburo</span></div>
+          <div class="vrow"><span class="vrow-jp">内湯</span><span class="vrow-es">Baño interior</span><span class="vrow-rm">uchiyu</span></div>
+          <div class="vrow"><span class="vrow-jp">貸切風呂</span><span class="vrow-es">Baño privado / exclusivo</span><span class="vrow-rm">kashikiri-buro</span></div>
+          <div class="vrow"><span class="vrow-jp">足湯</span><span class="vrow-es">Baño de pies</span><span class="vrow-rm">ashiyu</span></div>
+          <div class="vrow"><span class="vrow-jp">脱衣所</span><span class="vrow-es">Vestuario</span><span class="vrow-rm">datsuijo</span></div>
+          <div class="vrow"><span class="vrow-jp">洗い場</span><span class="vrow-es">Zona de ducha individual</span><span class="vrow-rm">araiba</span></div>
+          <div class="vrow"><span class="vrow-jp">受付</span><span class="vrow-es">Recepción</span><span class="vrow-rm">uketsuke</span></div>
+          <div class="vrow"><span class="vrow-jp">休憩室</span><span class="vrow-es">Sala de descanso</span><span class="vrow-rm">kyūkei-shitsu</span></div>
+          <div class="vrow"><span class="vrow-jp">ロッカー</span><span class="vrow-es">Taquilla / casillero</span><span class="vrow-rm">rokkā</span></div>
+        </div>
+        <div class="lbl">Términos del agua</div>
+        <div style="background:var(--paper);border:1.5px solid var(--card-border);border-radius:6px;padding:9px 12px;">
+          <div class="vrow"><span class="vrow-jp">泉質</span><span class="vrow-es">Composición del agua</span><span class="vrow-rm">sensshitsu</span></div>
+          <div class="vrow"><span class="vrow-jp">源泉</span><span class="vrow-es">Manantial / fuente</span><span class="vrow-rm">gensen</span></div>
+          <div class="vrow"><span class="vrow-jp">かけ流し</span><span class="vrow-es">Flujo directo sin recircular</span><span class="vrow-rm">kake-nagashi</span></div>
+          <div class="vrow"><span class="vrow-jp">湯温</span><span class="vrow-es">Temperatura del agua</span><span class="vrow-rm">yuon</span></div>
+          <div class="vrow"><span class="vrow-jp">湯の花</span><span class="vrow-es">Cristales de azufre</span><span class="vrow-rm">yuno-hana</span></div>
+          <div class="vrow"><span class="vrow-jp">飲泉</span><span class="vrow-es">Beber el agua termal</span><span class="vrow-rm">insen</span></div>
+          <div class="vrow"><span class="vrow-jp">のぼせ</span><span class="vrow-es">Mareo por calor</span><span class="vrow-rm">nobose</span></div>
+          <div class="vrow"><span class="vrow-jp">湯あたり</span><span class="vrow-es">Reacción mineral de la piel</span><span class="vrow-rm">yu-atari</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="lbl" style="margin-top:0;">Acciones y protocolo</div>
+        <div style="background:var(--paper);border:1.5px solid var(--card-border);border-radius:6px;padding:9px 12px;">
+          <div class="vrow"><span class="vrow-jp">入浴</span><span class="vrow-es">Baño / acto de bañarse</span><span class="vrow-rm">nyūyoku</span></div>
+          <div class="vrow"><span class="vrow-jp">入浴料</span><span class="vrow-es">Precio de la entrada</span><span class="vrow-rm">nyūyoku-ryō</span></div>
+          <div class="vrow"><span class="vrow-jp">かけ湯</span><span class="vrow-es">Agua de pre-baño</span><span class="vrow-rm">kakeyu</span></div>
+          <div class="vrow"><span class="vrow-jp">混浴</span><span class="vrow-es">Baño mixto</span><span class="vrow-rm">kon'yoku</span></div>
+          <div class="vrow"><span class="vrow-jp">女湯</span><span class="vrow-es">Baño de mujeres</span><span class="vrow-rm">onnayu</span></div>
+          <div class="vrow"><span class="vrow-jp">男湯</span><span class="vrow-es">Baño de hombres</span><span class="vrow-rm">otokoyu</span></div>
+          <div class="vrow"><span class="vrow-jp">日帰り入浴</span><span class="vrow-es">Visita de día</span><span class="vrow-rm">higaeri-nyūyoku</span></div>
+          <div class="vrow"><span class="vrow-jp">休憩</span><span class="vrow-es">Descanso entre sesiones</span><span class="vrow-rm">kyūkei</span></div>
+          <div class="vrow"><span class="vrow-jp">湯巻き</span><span class="vrow-es">Toalla de baño para cubrir</span><span class="vrow-rm">yu-maki</span></div>
+          <div class="vrow"><span class="vrow-jp">水風呂</span><span class="vrow-es">Baño de agua fría (sauna)</span><span class="vrow-rm">mizu-buro</span></div>
+        </div>
+        <div class="lbl">Componentes del agua</div>
+        <div style="background:var(--paper);border:1.5px solid var(--card-border);border-radius:6px;padding:9px 12px;">
+          <div class="vrow"><span class="vrow-jp">硫黄</span><span class="vrow-es">Azufre</span><span class="vrow-rm">iō</span></div>
+          <div class="vrow"><span class="vrow-jp">鉄分</span><span class="vrow-es">Hierro</span><span class="vrow-rm">tetsubun</span></div>
+          <div class="vrow"><span class="vrow-jp">炭酸</span><span class="vrow-es">CO₂ / ácido carbónico</span><span class="vrow-rm">tansan</span></div>
+          <div class="vrow"><span class="vrow-jp">塩化物</span><span class="vrow-es">Cloruros</span><span class="vrow-rm">enka-butsu</span></div>
+          <div class="vrow"><span class="vrow-jp">アルカリ性</span><span class="vrow-es">Alcalino</span><span class="vrow-rm">arukari-sei</span></div>
+          <div class="vrow"><span class="vrow-jp">酸性</span><span class="vrow-es">Ácido</span><span class="vrow-rm">sansei</span></div>
+          <div class="vrow"><span class="vrow-jp">泥</span><span class="vrow-es">Barro / lodo termal</span><span class="vrow-rm">doro</span></div>
+          <div class="vrow"><span class="vrow-jp">ラドン</span><span class="vrow-es">Radón</span><span class="vrow-rm">radon</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lbl">Señales habituales en los onsen</div>
+    <div class="effect-grid">
+      <div class="sign"><div class="sign-k">女</div><div class="sign-e">Mujeres</div></div>
+      <div class="sign"><div class="sign-k">男</div><div class="sign-e">Hombres</div></div>
+      <div class="sign"><div class="sign-k">混浴</div><div class="sign-e">Baño mixto</div></div>
+      <div class="sign" style="border:1.5px solid var(--red);border-radius:8px;"><div class="sign-k" style="color:var(--red);font-size:20px;">入浴禁止</div><div class="sign-e">Prohibido bañarse</div></div>
+      <div class="sign" style="border:1.5px solid #3A7060;border-radius:8px;"><div class="sign-k" style="color:#3A7060;font-size:20px;">飲泉可</div><div class="sign-e">Agua potable</div></div>
+    </div>
+  </div>
+
+  <div class="pg-foot"><span class="pf-br">Onsen con Fruta · Guía Premium</span><span class="pf-n">08</span></div>
+</div>
+
+
+<!-- PAGE 9 · FRASES PRÁCTICAS -->
+<div class="page">
+  <div class="ch-opener bg-dark">
+    <div class="ch-num-ghost">06</div>
+    <div class="ch-opener-content">
+      <div class="ch-num">Capítulo 06 — continuación</div>
+      <div class="ch-title">Frases prácticas por situación</div>
+    </div>
+  </div>
+
+  <div class="pg">
+    <div class="two" style="gap:11px;margin-bottom:12px;">
+      <div class="ph-block">
+        <div class="ph-head">En recepción</div>
+        <div class="ph-body">
+          <div class="ph-row"><div class="ph-jp">¿Cuánto cuesta la entrada?</div><div class="ph-es">Nyūyoku-ryō wa ikura desu ka?</div><div class="ph-note">入浴料はいくらですか？</div></div>
+          <div class="ph-row"><div class="ph-jp">¿Tienen baño privado disponible?</div><div class="ph-es">Kashikiri-buro wa arimasu ka?</div><div class="ph-note">貸切風呂はありますか？</div></div>
+          <div class="ph-row"><div class="ph-jp">¿Puedo alquilar una toalla?</div><div class="ph-es">Taoru no rentaru wa arimasu ka?</div><div class="ph-note">タオルのレンタルはありますか？</div></div>
+          <div class="ph-row"><div class="ph-jp">¿Hasta qué hora están abiertos?</div><div class="ph-es">Nanji made eigyō shite imasu ka?</div><div class="ph-note">何時まで営業していますか？</div></div>
+          <div class="ph-row"><div class="ph-jp">Una persona adulta, solo baño</div><div class="ph-es">Otona hitori, nyūyoku dake</div><div class="ph-note">大人一人、入浴のみ — frase estándar</div></div>
+        </div>
+      </div>
+      <div class="ph-block">
+        <div class="ph-head">En la bañera</div>
+        <div class="ph-body">
+          <div class="ph-row"><div class="ph-jp">¿Cuál es la temperatura del agua?</div><div class="ph-es">Yuon wa nan-do desu ka?</div><div class="ph-note">湯温は何度ですか？</div></div>
+          <div class="ph-row"><div class="ph-jp">El agua está muy caliente</div><div class="ph-es">O-yu ga atsusugimasu</div><div class="ph-note">お湯が熱すぎます</div></div>
+          <div class="ph-row"><div class="ph-jp">El agua está tibia / templada</div><div class="ph-es">O-yu ga nurui desu</div><div class="ph-note">お湯がぬるいです</div></div>
+          <div class="ph-row"><div class="ph-jp">¿Esta agua se puede beber?</div><div class="ph-es">Kono o-yu wa insen dekimasu ka?</div><div class="ph-note">このお湯は飲泉できますか？</div></div>
+          <div class="ph-row"><div class="ph-jp">¡Qué agua tan buena!</div><div class="ph-es">Ii yu desu ne!</div><div class="ph-note">いい湯ですね！— el cumplido perfecto</div></div>
+        </div>
+      </div>
+      <div class="ph-block">
+        <div class="ph-head">Cortesía y cultura</div>
+        <div class="ph-body">
+          <div class="ph-row"><div class="ph-jp">Con permiso (al pasar)</div><div class="ph-es">Shitsurei shimasu</div><div class="ph-note">失礼します</div></div>
+          <div class="ph-row"><div class="ph-jp">¿Dónde está la zona de ducha?</div><div class="ph-es">Araiba wa doko desu ka?</div><div class="ph-note">洗い場はどこですか？</div></div>
+          <div class="ph-row"><div class="ph-jp">¿Hay rotenburo (baño exterior)?</div><div class="ph-es">Rotenburo wa arimasu ka?</div><div class="ph-note">露天風呂はありますか？</div></div>
+          <div class="ph-row"><div class="ph-jp">¿Es agua directa del manantial?</div><div class="ph-es">Gensen-kake-nagashi desu ka?</div><div class="ph-note">源泉かけ流しですか？</div></div>
+          <div class="ph-row"><div class="ph-jp">Muchas gracias (al salir)</div><div class="ph-es">Arigatō gozaimashita</div><div class="ph-note">ありがとうございました</div></div>
+        </div>
+      </div>
+      <div class="ph-block" style="border-color:var(--red);">
+        <div class="ph-head" style="background:var(--red2);">Emergencias</div>
+        <div class="ph-body" style="background:#F8EFEC;">
+          <div class="ph-row"><div class="ph-jp" style="color:var(--red);">No me siento bien</div><div class="ph-es">Kibun ga warui desu</div><div class="ph-note">気分が悪いです</div></div>
+          <div class="ph-row"><div class="ph-jp" style="color:var(--red);">Tengo mareos</div><div class="ph-es">Memai ga shimasu</div><div class="ph-note">めまいがします</div></div>
+          <div class="ph-row"><div class="ph-jp" style="color:var(--red);">¡Ayúdenme! / ¡Socorro!</div><div class="ph-es">Tasukete kudasai!</div><div class="ph-note">助けてください！</div></div>
+          <div class="ph-row"><div class="ph-jp" style="color:var(--red);">Por favor llamen a una ambulancia</div><div class="ph-es">Kyūkyūsha wo yonde kudasai</div><div class="ph-note">救急車を呼んでください</div></div>
+          <div class="ph-row"><div class="ph-jp" style="color:var(--red);">Emergencias en Japón</div><div class="ph-es" style="font-size:13px;font-weight:700;color:var(--red2);font-family:'Cormorant Garamond',serif;">119 Ambulancia &nbsp;·&nbsp; 110 Policía</div><div class="ph-note">Desde cualquier teléfono en Japón</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-dark">
+      <div class="callout-head">Nota sobre pronunciación japonesa</div>
+      <p>Las vocales se pronuncian como en español: <strong>a, i, u, e, o</strong>. La «r» japonesa suena entre la «r» y la «l» española: suave, no vibrante. Doblar una vocal (<em>ō, ū</em>) significa alargarla. Si pronuncias cada sílaba con la misma duración, ya estarás siendo comprendido.</p>
+    </div>
+  </div>
+
+  <div class="pg-foot"><span class="pf-br">Onsen con Fruta · Guía Premium</span><span class="pf-n">09</span></div>
+</div>
+
+
+<!-- PAGE 10 · TATUAJES -->
+<div class="page">
+  <div class="ch-opener bg-slate">
+    <div class="ch-num-ghost">07</div>
+    <div class="ch-opener-content">
+      <div class="ch-num">Capítulo 07</div>
+      <div class="ch-title">Tatuajes — Cómo disfrutar el onsen sin restricciones</div>
+    </div>
+  </div>
+
+  <div class="pg">
+    <div style="background:#1C1008;border-left:3px solid var(--amber3);border-radius:0 6px 6px 0;padding:14px 18px;margin-bottom:16px;">
+      <div style="font-size:8px;font-weight:700;color:var(--amber3);letter-spacing:3px;text-transform:uppercase;margin-bottom:7px;">Contexto histórico</div>
+      <p style="font-family:'EB Garamond',serif;font-size:11.5px;color:rgba(255,255,255,.48);line-height:1.80;">Históricamente en Japón, los tatuajes (irezumi) estaban asociados a la yakuza y al crimen organizado. Esta asociación, aunque obsoleta, sigue vigente en algunos establecimientos. No es un juicio sobre el tatuaje como expresión artística: es un reflejo de décadas de contexto social japonés. La situación está cambiando rápidamente, especialmente en Kyushu donde el turismo internacional es bienvenido.</p>
+    </div>
+
+    <div class="two" style="margin-bottom:15px;">
+      <div class="callout callout-teal" style="margin:0;">
+        <div class="callout-head">Opciones garantizadas</div>
+        <ul style="list-style:none;padding:0;">
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:4px 0 4px 14px;position:relative;color:var(--ink2);line-height:1.65;border-bottom:1px solid var(--rule2);"><span style="position:absolute;left:0;color:#3A7060;font-weight:700;">✓</span><strong>Kashikiri-buro</strong> — Sin restricciones. Siempre funciona.</li>
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:4px 0 4px 14px;position:relative;color:var(--ink2);line-height:1.65;border-bottom:1px solid var(--rule2);"><span style="position:absolute;left:0;color:#3A7060;font-weight:700;">✓</span><strong>Ryokan con habitación y baño propio</strong> — Uso exclusivo, sin restricciones.</li>
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:4px 0 4px 14px;position:relative;color:var(--ink2);line-height:1.65;border-bottom:1px solid var(--rule2);"><span style="position:absolute;left:0;color:#3A7060;font-weight:700;">✓</span><strong>Consultar directamente</strong> — Muchos son más flexibles de lo que indica su web.</li>
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:4px 0 4px 14px;position:relative;color:var(--ink2);line-height:1.65;"><span style="position:absolute;left:0;color:#3A7060;font-weight:700;">✓</span><strong>Tattoo-friendly onsen</strong> — Lista creciente en Kyushu.</li>
+        </ul>
+      </div>
+      <div class="callout callout-gold" style="margin:0;">
+        <div class="callout-head">Alternativas en baños comunitarios</div>
+        <ul style="list-style:none;padding:0;">
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:4px 0 4px 14px;position:relative;color:var(--ink2);line-height:1.65;border-bottom:1px solid var(--rule2);"><span style="position:absolute;left:0;color:var(--amber);font-weight:700;">—</span><strong>Rash guard:</strong> algunos permiten cubrir el tatuaje. Consultar antes.</li>
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:4px 0 4px 14px;position:relative;color:var(--ink2);line-height:1.65;border-bottom:1px solid var(--rule2);"><span style="position:absolute;left:0;color:var(--amber);font-weight:700;">—</span><strong>Parche adhesivo:</strong> para tatuajes pequeños (&lt;10 cm). Siempre preguntar.</li>
+          <li style="font-family:'EB Garamond',serif;font-size:10.5px;padding:4px 0 4px 14px;position:relative;color:var(--ink2);line-height:1.65;"><span style="position:absolute;left:0;color:var(--amber);font-weight:700;">—</span><strong>Horario exclusivo:</strong> algunos permiten reservar el establecimiento completo.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lbl">Establecimientos recomendados — Kyushu</div>
+    <table class="t" style="margin-bottom:13px;">
+      <thead>
+        <tr><th>Establecimiento</th><th>Tipo</th><th>Política de tatuajes</th><th>Especial para</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Myōban Yunohana<br><span style="font-size:8px;color:var(--mist);">明礬温泉 湯の里</span></td>
+          <td>Comunitario + kashikiri</td>
+          <td style="color:#3A7030;font-weight:600;">Kashikiri sin restricción</td>
+          <td>«Flores de azufre», familia</td>
+        </tr>
+        <tr>
+          <td>Ryokan en Yufuin<br><span style="font-size:8px;color:var(--mist);">由布院各旅館</span></td>
+          <td>Habitación con baño privado</td>
+          <td style="color:#3A7030;font-weight:600;">Baño privado = sin restricción</td>
+          <td>Pareja, alta gama, rotenburo</td>
+        </tr>
+        <tr>
+          <td>Kurokawa Onsen<br><span style="font-size:8px;color:var(--mist);">黒川温泉</span></td>
+          <td>Red de ryokan con kashikiri</td>
+          <td style="color:#3A7030;font-weight:600;">Kashikiri sin restricción</td>
+          <td>«Nyūtō tegata» — bono 3 baños</td>
+        </tr>
+        <tr>
+          <td>Jigoku mushiyu<br><span style="font-size:8px;color:var(--mist);">地獄蒸し湯</span></td>
+          <td>Baño de vapor (ropa puesta)</td>
+          <td style="color:#3A7030;font-weight:600;">Sin restricción (vestido)</td>
+          <td>Experiencia única con ropa de algodón</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout callout-dark">
+      <div class="callout-head">El contexto está cambiando</div>
+      <p>Con el crecimiento del turismo internacional, muchos establecimientos han flexibilizado sus restricciones. En Kyushu, donde el turismo hispano y latinoamericano crece especialmente, la tendencia va hacia la apertura total. Furuta mantiene una lista actualizada de onsen tattoo-friendly en Beppu y Yufuin para todos sus suscriptores.</p>
+    </div>
+  </div>
+
+  <div class="pg-foot"><span class="pf-br">Onsen con Fruta · Guía Premium</span><span class="pf-n">10</span></div>
+</div>
+
+</body>
+</html>

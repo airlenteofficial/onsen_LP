@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onsen en Kyushu con Guía en Español – @onsen.con.fruta</title>
+  <meta name="description" content="Descubre las aguas termales de Kyushu con guía en español. Tours privados para familias y parejas. Beppu, Yufuin, Aso y más." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:        #fdf6ee;
+      --cream2:       #f7ede0;
+      --cream3:       #f0e0cc;
+      --sakura:       #f2a8b8;
+      --sakura-light: #fce4ec;
+      --sakura-pale:  #fff5f7;
+      --gold:         #c8960c;
+      --gold2:        #e8b84b;
+      --gold-pale:    #fef8e7;
+      --brown:        #5c3d1e;
+      --brown2:       #8b5e3c;
+      --red-stamp:    #c0392b;
+      --navy:         #2c3e6b;
+      --text:         #3a2c1e;
+      --text-light:   #7a6050;
+      --white:        #ffffff;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans:  'Lato', sans-serif;
+      --shadow: 0 4px 20px rgba(92,61,30,0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-weight: 400;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ═══════════════════════════════
+       NAV
+    ═══════════════════════════════ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(253,246,238,0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--sakura);
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--brown);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--sakura); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--brown2);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+    .nav-links a:hover { color: var(--sakura); }
+
+    .nav-cta {
+      background: var(--sakura);
+      color: var(--white) !important;
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      font-size: 0.8rem !important;
+      font-weight: 900 !important;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .nav-cta:hover { background: #e0829a !important; transform: translateY(-1px); }
+
+    /* ═══════════════════════════════
+       HERO – ビラ風スプリット
+    ═══════════════════════════════ */
+    .hero {
+      margin-top: 54px;
+      min-height: calc(100svh - 54px);
+      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    /* 桜の背景装飾 */
+    .hero-bg-deco {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 80% 20%, rgba(242,168,184,0.18) 0%, transparent 40%),
+        radial-gradient(circle at 10% 80%, rgba(242,168,184,0.12) 0%, transparent 35%),
+        radial-gradient(circle at 50% 50%, rgba(253,246,238,0) 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .sakura-deco {
+      position: absolute;
+      pointer-events: none;
+      user-select: none;
+      line-height: 1;
+    }
+    .sd1 { font-size: 5rem; top: 0.5rem; left: -1rem; opacity: 0.12; }
+    .sd2 { font-size: 7rem; top: 2rem; right: -1rem; opacity: 0.1; }
+    .sd3 { font-size: 4rem; bottom: 3rem; left: 5%; opacity: 0.1; }
+    .sd4 { font-size: 3rem; bottom: 1rem; right: 8%; opacity: 0.12; }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-text { }
+
+    .hero-discover-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gold-pale);
+      border: 2px solid var(--gold2);
+      color: var(--gold);
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.4em 1em;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 900;
+      line-height: 1;
+      color: var(--brown);
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-text h1 .en-kyushu {
+      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+      font-style: italic;
+      font-weight: 700;
+      color: var(--sakura);
+      display: block;
+      margin-top: 0.1rem;
+    }
+
+    .hero-guia-badge {
+      display: inline-block;
+      background: var(--brown);
+      color: var(--gold2);
+      font-size: 0.85rem;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      padding: 0.4em 1.2em;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+      line-height: 1.75;
+    }
+
+    .hero-sub strong { color: var(--brown); font-weight: 700; }
+
+    .hero-stat-strip {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .hstat {
+      text-align: center;
+      background: var(--white);
+      border: 2px solid var(--sakura-light);
+      border-radius: 12px;
+      padding: 0.6rem 1rem;
+      min-width: 70px;
+    }
+    .hstat-num {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--brown);
+      line-height: 1;
+    }
+    .hstat-label {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-pink {
+      background: var(--sakura);
+      color: var(--white);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      padding: 0.85rem 1.8rem;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: transform 0.2s, background 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .btn-pink:hover { background: #e0829a; transform: translateY(-2px); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--brown);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 0.85rem 1.8rem;
+      text-decoration: none;
+      border: 2px solid var(--brown);
+      border-radius: 25px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-outline:hover { background: var(--brown); color: var(--white); }
+
+    /* Hero photos grid */
+    .hero-photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 0.8rem;
+    }
+
+    .hero-photo {
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-photo:first-child {
+      grid-column: 1 / -1;
+      height: 200px;
+    }
+
+    .hero-photo { height: 140px; }
+
+    .hero-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .hero-photo:hover img { transform: scale(1.05); }
+
+    .photo-label {
+      position: absolute;
+      bottom: 0.6rem;
+      left: 0.6rem;
+      background: rgba(92,61,30,0.82);
+      color: var(--white);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25em 0.7em;
+      border-radius: 10px;
+    }
+
+    /* ═══════════════════════════════
+       ICON STRIP – ビラ下部アイコン風
+    ═══════════════════════════════ */
+    .icon-strip {
+      background: var(--brown);
+      padding: 1.5rem 1rem;
+    }
+
+    .icon-strip-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .istrip-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+      color: var(--white);
+      min-width: 80px;
+    }
+    .istrip-icon { font-size: 1.8rem; }
+    .istrip-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold2);
+      text-align: center;
+    }
+
+    /* ═══════════════════════════════
+       ABOUT FURUTA
+    ═══════════════════════════════ */
+    .about {
+      background: var(--white);
+      padding: 5rem 1.5rem;
+    }
+
+    .about-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-card {
+      background: var(--cream);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      border: 3px solid var(--sakura-light);
+      position: relative;
+    }
+
+    .about-card::before {
+      content: '🌸';
+      position: absolute;
+      top: -1rem;
+      right: 1rem;
+      font-size: 2rem;
+    }
+
+    .about-photo-circle {
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--sakura-light), var(--cream2));
+      border: 4px solid var(--sakura);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      margin: 0 auto 1rem;
+    }
+
+    .about-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--brown);
+      margin-bottom: 0.3rem;
+    }
+
+    .guide-badge {
+      display: inline-block;
+      background: var(--sakura);
+      color: var(--white);
+      font-size: 0.7rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25em 0.8em;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .flag-row {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.68rem;
+      font-weight: 900;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+    .section-label::before, .section-label::after {
+      content: '';
+      display: block;
+      width: 20px; height: 2px;
+      background: var(--gold2);
+    }
+
+    h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--brown);
+      margin-bottom: 1rem;
+    }
+    h2 em { font-style: italic; color: var(--sakura); }
+
+    .lead {
+      font-size: 1rem;
+      color: var(--text-light);
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+
+    .stats-row {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      background: var(--cream);
+      border-radius: 12px;
+      border-top: 3px solid var(--sakura);
+      padding: 0.8rem 1.2rem;
+      text-align: center;
+      flex: 1;
+      min-width: 70px;
+    }
+    .stat-num {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--brown);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    /* ═══════════════════════════════
+       WHY KYUSHU
+    ═══════════════════════════════ */
+    .why {
+      background: var(--sakura-pale);
+      padding: 5rem 1.5rem;
+    }
+
+    .why-inner { max-width: 1000px; margin: 0 auto; }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .why-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 1.5rem;
+      border-left: 4px solid var(--sakura);
+      box-shadow: 0 2px 12px rgba(242,168,184,0.15);
+      transition: transform 0.2s;
+    }
+    .why-card:hover { transform: translateY(-3px); }
+
+    .why-icon { font-size: 2.2rem; margin-bottom: 0.6rem; display: block; }
+    .why-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 0.3rem;
+    }
+    .why-card p { font-size: 0.85rem; color: var(--text-light); margin: 0; line-height: 1.6; }
+
+    /* ═══════════════════════════════
+       AREAS – カード写真付き
+    ═══════════════════════════════ */
+    .areas {
+      background: var(--white);
+      padding: 5rem 1.5rem;
+    }
+
+    .areas-inner { max-width: 1000px; margin: 0 auto; }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    .area-card {
+      background: var(--cream);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s;
+    }
+    .area-card:hover { transform: translateY(-4px); }
+
+    .area-img {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      position: relative;
+    }
+
+    .area-img.beppu  { background: linear-gradient(135deg, #d4f0f8 0%, #a8dde8 100%); }
+    .area-img.yufuin { background: linear-gradient(135deg, #d8f0d8 0%, #b0d8b0 100%); }
+    .area-img.aso    { background: linear-gradient(135deg, #f0dcc8 0%, #d8b898 100%); }
+    .area-img.fukuoka { background: linear-gradient(135deg, #f8e8d0 0%, #e8d0b0 100%); }
+
+    .area-tag-top {
+      position: absolute;
+      top: 0.7rem;
+      right: 0.7rem;
+      background: rgba(92,61,30,0.85);
+      color: var(--gold2);
+      font-size: 0.62rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.25em 0.7em;
+      border-radius: 8px;
+    }
+
+    .area-body { padding: 1.2rem; }
+    .area-body h3 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--brown);
+      margin-bottom: 0.4rem;
+    }
+    .area-body p { font-size: 0.85rem; color: var(--text-light); margin: 0; line-height: 1.6; }
+
+    /* ═══════════════════════════════
+       TOUR INCLUDES
+    ═══════════════════════════════ */
+    .includes {
+      background: var(--cream2);
+      padding: 5rem 1.5rem;
+    }
+
+    .includes-inner { max-width: 1000px; margin: 0 auto; }
+
+    .includes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .include-item {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 1.4rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(92,61,30,0.07);
+      transition: transform 0.2s;
+    }
+    .include-item:hover { transform: translateY(-3px); }
+
+    .include-icon { font-size: 2rem; margin-bottom: 0.5rem; display: block; }
+    .include-item h3 { font-size: 0.88rem; font-weight: 700; color: var(--brown); margin-bottom: 0.2rem; }
+    .include-item p { font-size: 0.8rem; color: var(--text-light); margin: 0; }
+
+    .price-banner {
+      margin-top: 2rem;
+      background: linear-gradient(135deg, var(--brown) 0%, #3d2510 100%);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .price-left { text-align: left; }
+    .price-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold2); opacity: 0.8; }
+    .price-num {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+    }
+    .price-num small { font-size: 1rem; color: rgba(255,255,255,0.55); }
+    .price-note { font-size: 0.8rem; color: rgba(255,255,255,0.55); margin-top: 0.3rem; }
+
+    /* ═══════════════════════════════
+       PASSPORT
+    ═══════════════════════════════ */
+    .passport-section {
+      background: var(--gold-pale);
+      padding: 5rem 1.5rem;
+      text-align: center;
+    }
+
+    .passport-card {
+      background: var(--white);
+      border: 3px solid var(--gold2);
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 480px;
+      margin: 2rem auto 0;
+      position: relative;
+    }
+
+    .passport-card::before {
+      content: '温泉パスポート';
+      position: absolute;
+      top: 0.8rem; right: 1rem;
+      font-size: 0.6rem;
+      color: rgba(200,150,12,0.3);
+      letter-spacing: 0.1em;
+    }
+
+    .passport-icon { font-size: 3.5rem; margin-bottom: 0.8rem; display: block; }
+    .passport-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--brown);
+      margin-bottom: 0.6rem;
+    }
+    .passport-card p { font-size: 0.88rem; color: var(--text-light); }
+
+    .stamp-row {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-top: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .stamp {
+      width: 52px; height: 52px;
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      background: var(--sakura-pale);
+    }
+
+    /* ═══════════════════════════════
+       ARTICLES + SIDEBAR
+    ═══════════════════════════════ */
+    .articles-section {
+      background: var(--cream);
+      padding: 5rem 1.5rem;
+    }
+
+    .articles-inner { max-width: 1100px; margin: 0 auto; }
+
+    .articles-layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 2.5rem;
+      align-items: flex-start;
+      margin-top: 2rem;
+    }
+
+    .article-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      margin-bottom: 1.2rem;
+      display: flex;
+      transition: transform 0.2s;
+    }
+    .article-card:hover { transform: translateY(-3px); }
+
+    .article-thumb {
+      width: 130px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+    }
+
+    .article-thumb.t1 { background: linear-gradient(135deg, #d4f0f8, #a8dde8); }
+    .article-thumb.t2 { background: linear-gradient(135deg, #d8f0d8, #b0d8b0); }
+    .article-thumb.t3 { background: linear-gradient(135deg, #f0dcc8, #d8b898); }
+    .article-thumb.t4 { background: linear-gradient(135deg, #fce4ec, #f7c5d5); }
+    .article-thumb.t5 { background: linear-gradient(135deg, #f7ede0, #f0dcc8); }
+
+    .article-body { padding: 1.2rem; }
+
+    .article-meta {
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+      margin-bottom: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .article-cat {
+      background: var(--sakura-light);
+      color: var(--brown);
+      font-size: 0.62rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2em 0.6em;
+      border-radius: 8px;
+    }
+    .article-date { font-size: 0.72rem; color: var(--text-light); }
+
+    .article-body h3 {
+      font-family: var(--font-serif);
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 0.4rem;
+      line-height: 1.4;
+    }
+
+    .article-body p { font-size: 0.82rem; color: var(--text-light); margin: 0 0 0.6rem; line-height: 1.6; }
+    .article-link { font-size: 0.78rem; font-weight: 700; color: var(--sakura); text-decoration: none; }
+    .article-link:hover { color: var(--brown); }
+
+    /* Sidebar */
+    .sidebar { position: sticky; top: 70px; }
+
+    .sidebar-widget {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 1.4rem;
+      margin-bottom: 1.2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .widget-title {
+      font-family: var(--font-serif);
+      font-size: 0.92rem;
+      font-weight: 900;
+      color: var(--brown);
+      border-bottom: 2px solid var(--sakura);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .cat-list { list-style: none; }
+    .cat-list li { border-bottom: 1px solid var(--cream2); }
+    .cat-list li:last-child { border-bottom: none; }
+    .cat-list a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.86rem;
+      transition: color 0.2s;
+    }
+    .cat-list a:hover { color: var(--brown); }
+    .cat-count {
+      background: var(--sakura-light);
+      color: var(--brown);
+      font-size: 0.65rem;
+      font-weight: 900;
+      padding: 0.15em 0.5em;
+      border-radius: 8px;
+    }
+
+    .recent-list { list-style: none; }
+    .recent-item {
+      display: flex;
+      gap: 0.7rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--cream2);
+      align-items: flex-start;
+    }
+    .recent-item:last-child { border-bottom: none; }
+
+    .recent-thumb {
+      width: 50px; height: 50px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .rt1 { background: linear-gradient(135deg,#d4f0f8,#a8dde8); }
+    .rt2 { background: linear-gradient(135deg,#d8f0d8,#b0d8b0); }
+    .rt3 { background: linear-gradient(135deg,#f0dcc8,#d8b898); }
+    .rt4 { background: linear-gradient(135deg,#fce4ec,#f7c5d5); }
+
+    .recent-item a { font-size: 0.8rem; color: var(--text); text-decoration: none; line-height: 1.4; }
+    .recent-item a:hover { color: var(--brown); }
+    .recent-date { font-size: 0.68rem; color: var(--text-light); margin-top: 0.2rem; display: block; }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--sakura) 0%, #e0829a 100%);
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .sidebar-cta p { font-size: 0.85rem; color: rgba(255,255,255,0.9); margin-bottom: 0.8rem; font-weight: 700; }
+    .sidebar-cta a {
+      display: inline-block;
+      background: var(--white);
+      color: var(--brown);
+      font-size: 0.82rem;
+      font-weight: 900;
+      padding: 0.6rem 1.3rem;
+      text-decoration: none;
+      border-radius: 20px;
+      transition: transform 0.2s;
+    }
+    .sidebar-cta a:hover { transform: scale(1.03); }
+
+    /* ═══════════════════════════════
+       CTA
+    ═══════════════════════════════ */
+    .cta-section {
+      background: linear-gradient(135deg, var(--brown) 0%, #3d2510 100%);
+      padding: 5rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '🌸';
+      position: absolute;
+      font-size: 12rem;
+      opacity: 0.04;
+      top: -2rem; right: -2rem;
+      pointer-events: none;
+    }
+
+    .cta-section .section-label { color: var(--gold2); }
+    .cta-section .section-label::before,
+    .cta-section .section-label::after { background: var(--gold2); }
+
+    .cta-section h2 { color: var(--white); margin-bottom: 0.5rem; }
+    .cta-section h2 em { color: var(--gold2); }
+    .cta-section .lead { color: rgba(253,246,238,0.7); max-width: 480px; margin: 0 auto 2rem; }
+
+    .cta-handle {
+      display: inline-block;
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--gold2);
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+      transition: color 0.2s;
+    }
+    .cta-handle:hover { color: var(--white); }
+
+    .cta-small { margin-top: 1rem; font-size: 0.75rem; color: rgba(253,246,238,0.35); }
+
+    /* ═══════════════════════════════
+       FOOTER
+    ═══════════════════════════════ */
+    footer {
+      background: #1a0e05;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border-top: 2px solid var(--sakura);
+    }
+    footer p { font-size: 0.78rem; color: rgba(253,246,238,0.3); margin: 0.2rem 0; }
+    footer a { color: var(--sakura); text-decoration: none; }
+
+    /* ═══════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════ */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-photos { display: none; }
+      .about-inner { grid-template-columns: 1fr; }
+      .includes-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .articles-layout { grid-template-columns: 1fr 240px; }
+      .article-card { flex-direction: column; }
+      .article-thumb { width: 100%; height: 120px; }
+    }
+
+    @media (max-width: 600px) {
+      .why-grid { grid-template-columns: 1fr; }
+      .areas-grid { grid-template-columns: 1fr; }
+      .hero-btns { flex-direction: column; align-items: flex-start; }
+      .price-banner { flex-direction: column; text-align: center; }
+      .price-left { text-align: center; }
+      .nav-links a:not(.nav-cta) { display: none; }
+    }
+
+    @media (max-width: 520px) {
+      .articles-layout { grid-template-columns: 1fr 180px; }
+      .includes-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">♨️ Onsen <span>con Fruta</span></a>
+    <div class="nav-links">
+      <a href="#articulos">Artículos</a>
+      <a href="#areas">Destinos</a>
+      <a href="https://www.instagram.com/onsen.con.fruta" target="_blank" rel="noopener" class="nav-cta">📩 Reservar</a>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-bg-deco"></div>
+    <span class="sakura-deco sd1">🌸</span>
+    <span class="sakura-deco sd2">🌸</span>
+    <span class="sakura-deco sd3">🌸</span>
+    <span class="sakura-deco sd4">🌸</span>
+
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-discover-badge">⛩ Descubre el verdadero Japón</div>
+
+        <h1>
+          ONSEN
+          <span class="en-kyushu">en Kyushu</span>
+        </h1>
+
+        <div class="hero-guia-badge">con guía en español 🗣</div>
+
+        <p class="hero-sub">
+          <strong>Más allá de Tokio y Kioto.</strong><br>
+          Aguas azules, sulfurosas y de colores únicos.<br>
+          Tours privados para familias y parejas.
+        </p>
+
+        <div class="hero-stat-strip">
+          <div class="hstat">
+            <span class="hstat-num">63</span>
+            <span class="hstat-label">países</span>
+          </div>
+          <div class="hstat">
+            <span class="hstat-num">🇲🇽</span>
+            <span class="hstat-label">México</span>
+          </div>
+          <div class="hstat">
+            <span class="hstat-num">100%</span>
+            <span class="hstat-label">privado</span>
+          </div>
+        </div>
+
+        <div class="hero-btns">
+          <a href="https://www.instagram.com/onsen.con.fruta" target="_blank" rel="noopener" class="btn-pink">
+            📩 Escríbeme por DM
+          </a>
+          <a href="#areas" class="btn-outline">Ver destinos</a>
+        </div>
+      </div>
+
+      <!-- Foto grid -->
+      <div class="hero-photos">
+        <div class="hero-photo">
+          <img src="https://images.unsplash.com/photo-1606918801925-e2c914c4b503?w=800&q=80" alt="Onsen Beppu" />
+          <span class="photo-label">♨️ Onsen únicos</span>
+        </div>
+        <div class="hero-photo">
+          <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=400&q=80" alt="Naturaleza Kyushu" />
+          <span class="photo-label">🌿 Naturaleza</span>
+        </div>
+        <div class="hero-photo">
+          <img src="https://images.unsplash.com/photo-1591871937573-74dbba515c4c?w=400&q=80" alt="Gastronomia" />
+          <span class="photo-label">🍜 Gastronomía</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ICON STRIP -->
+  <div class="icon-strip">
+    <div class="icon-strip-inner">
+      <div class="istrip-item">
+        <span class="istrip-icon">🚗</span>
+        <span class="istrip-label">Transporte<br>privado</span>
+      </div>
+      <div class="istrip-item">
+        <span class="istrip-icon">👨‍👩‍👧</span>
+        <span class="istrip-label">Tours ideales<br>para familias</span>
+      </div>
+      <div class="istrip-item">
+        <span class="istrip-icon">♨️</span>
+        <span class="istrip-label">Onsen privado<br>disponible</span>
+      </div>
+      <div class="istrip-item">
+        <span class="istrip-icon">😌</span>
+        <span class="istrip-label">Viaje sin estrés<br>todo organizado</span>
+      </div>
+      <div class="istrip-item">
+        <span class="istrip-icon">🗣</span>
+        <span class="istrip-label">Guía en<br>español</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ABOUT FURUTA -->
+  <section class="about">
+    <div class="about-inner">
+      <div class="about-card">
+        <div class="about-photo-circle">🧑‍🦱</div>
+        <h3>Furuta</h3>
+        <span class="guide-badge">Guía Oficial 🇯🇵</span>
+        <p style="font-size:0.88rem;color:var(--text-light);line-height:1.7;">
+          Guía en Japón con experiencia<br>en turismo hispanohablante.
+        </p>
+        <div class="flag-row">🇯🇵 🇲🇽 🇪🇸 🇦🇷</div>
+      </div>
+
+      <div>
+        <p class="section-label">Tu guía</p>
+        <h2>Hola, soy <em>Furuta</em> 👋</h2>
+        <p class="lead">
+          He viajado por 63 países y viví 6 meses en México 🇲🇽. Después de conocer tantas culturas, decidí empezar como guía en Japón.
+        </p>
+        <p class="lead">
+          Quiero mostrarte un Japón diferente, más allá de Tokio o Kioto. Un Japón más auténtico, más tranquilo. Las aguas termales de Kyushu son el mejor lugar para encontrarlo.
+        </p>
+        <p class="lead">
+          Si viajas en familia, puedo ayudarte a organizar todo de forma fácil y sin estrés. 👨‍👩‍👧
+        </p>
+
+        <div class="stats-row">
+          <div class="stat">
+            <span class="stat-num">63</span>
+            <span class="stat-label">Países</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">6m</span>
+            <span class="stat-label">En México</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">ES</span>
+            <span class="stat-label">Español fluido</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- WHY KYUSHU -->
+  <section class="why">
+    <div class="why-inner">
+      <div style="text-align:center;">
+        <p class="section-label">Por qué Kyushu</p>
+        <h2>Kyushu es el lugar con<br><em>más onsen en Japón</em></h2>
+        <p class="lead" style="max-width:560px;margin:0 auto;">
+          Hay aguas de color azul, sulfurosas y hasta termas con gas natural. No existe otro lugar igual en el mundo.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <span class="why-icon">💙</span>
+          <h3>Aguas de color azul</h3>
+          <p>Los "infiernos" de Beppu: géiseres de colores imposibles. Azul cobalto, rojo, blanco y verde esmeralda.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-icon">🌋</span>
+          <h3>Aguas volcánicas</h3>
+          <p>El volcán Aso produce aguas únicas en el mundo. Sulfurosas, minerales, con una energía que se siente en la piel.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-icon">🌿</span>
+          <h3>Naturaleza impresionante</h3>
+          <p>Montañas, bosques y valles de niebla. La naturaleza de Kyushu es un espectáculo en sí misma.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-icon">🍜</span>
+          <h3>Gastronomía local</h3>
+          <p>También quiero que disfrutes la comida local 🍱 como ramen tonkotsu, castella y otros sabores únicos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ÁREAS -->
+  <section class="areas" id="areas">
+    <div class="areas-inner">
+      <p class="section-label">Áreas de tour</p>
+      <h2>Fukuoka · Beppu / Yufuin<br><em>Aso · y más!</em></h2>
+
+      <div class="areas-grid">
+        <div class="area-card">
+          <div class="area-img beppu">
+            ♨️
+            <span class="area-tag-top">Los 8 Infiernos</span>
+          </div>
+          <div class="area-body">
+            <h3>Beppu</h3>
+            <p>La capital del onsen. Géiseres de colores únicos: azul cobalto, rojo sangre y blanco nieve. Calles llenas de vapor natural.</p>
+          </div>
+        </div>
+
+        <div class="area-card">
+          <div class="area-img yufuin">
+            🏔
+            <span class="area-tag-top">Valle de niebla</span>
+          </div>
+          <div class="area-body">
+            <h3>Yufuin</h3>
+            <p>Un pueblo de cuento rodeado de montañas. Ryokanes boutique con vistas al monte Yufu. Perfecto para parejas.</p>
+          </div>
+        </div>
+
+        <div class="area-card">
+          <div class="area-img aso">
+            🌋
+            <span class="area-tag-top">Volcán activo</span>
+          </div>
+          <div class="area-body">
+            <h3>Aso</h3>
+            <p>El volcán más grande de Japón. Aguas surgidas directamente del volcán. El onsen más salvaje y mineral.</p>
+          </div>
+        </div>
+
+        <div class="area-card">
+          <div class="area-img fukuoka">
+            🏙
+            <span class="area-tag-top">Ciudad vibrante</span>
+          </div>
+          <div class="area-body">
+            <h3>Fukuoka</h3>
+            <p>La puerta de entrada a Kyushu. Gastronomía increíble, yatai callejeros y onsen urbano para empezar el viaje.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TOUR INCLUDES -->
+  <section class="includes">
+    <div class="includes-inner">
+      <p class="section-label">El tour incluye</p>
+      <h2>Todo incluido.<br><em>Tú solo disfruta.</em></h2>
+
+      <div class="includes-grid">
+        <div class="include-item">
+          <span class="include-icon">🚗</span>
+          <h3>Transporte privado</h3>
+          <p>Vehículo exclusivo para tu grupo todo el día.</p>
+        </div>
+        <div class="include-item">
+          <span class="include-icon">♨️</span>
+          <h3>Onsen privado</h3>
+          <p>Baño exclusivo solo para tu familia o pareja.</p>
+        </div>
+        <div class="include-item">
+          <span class="include-icon">🏯</span>
+          <h3>Ryokan</h3>
+          <p>Alojamiento tradicional japonés reservado.</p>
+        </div>
+        <div class="include-item">
+          <span class="include-icon">👨‍👩‍👧</span>
+          <h3>Ideal para familias</h3>
+          <p>Ritmo adaptado, espacios seguros para niños.</p>
+        </div>
+        <div class="include-item">
+          <span class="include-icon">🗣</span>
+          <h3>Guía en español</h3>
+          <p>Explicación cultural profunda, sin barreras.</p>
+        </div>
+        <div class="include-item">
+          <span class="include-icon">😌</span>
+          <h3>Sin estrés</h3>
+          <p>Yo organizo todo: reservas, rutas y logística.</p>
+        </div>
+      </div>
+
+      <div class="price-banner">
+        <div class="price-left">
+          <p class="price-label">Precio por día / grupo</p>
+          <div class="price-num">¥90,000 <small>/ grupo</small></div>
+          <p class="price-note">Tour privado completo · Itinerario flexible</p>
+        </div>
+        <a href="https://www.instagram.com/onsen.con.fruta" target="_blank" rel="noopener" class="btn-pink" style="font-size:1rem;padding:1rem 2rem;">
+          📩 Consultar disponibilidad
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PASSPORT -->
+  <section class="passport-section">
+    <div style="max-width:700px;margin:0 auto;">
+      <p class="section-label">Experiencia especial</p>
+      <h2>¡Descubre Beppu con el<br><em>Pasaporte de Onsens!</em> 🛂</h2>
+      <p class="lead">Visita los onsen participantes en Beppu, reúne sellos y consigue beneficios exclusivos.</p>
+
+      <div class="passport-card">
+        <span class="passport-icon">📕</span>
+        <h3>BEPPU ONSEN PASSPORT<br>別府温泉パスポート</h3>
+        <p>Una experiencia única que solo puedes vivir con guía local. Cada sello, un recuerdo.</p>
+        <div class="stamp-row">
+          <div class="stamp">♨️</div>
+          <div class="stamp">💙</div>
+          <div class="stamp">🌿</div>
+          <div class="stamp">🌋</div>
+          <div class="stamp">⭐</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ARTICLES -->
+  <section class="articles-section" id="articulos">
+    <div class="articles-inner">
+      <p class="section-label">Guía de Onsen</p>
+      <h2>Artículos & <em>Consejos</em></h2>
+
+      <div class="articles-layout">
+        <main>
+          <div class="article-card">
+            <div class="article-thumb t1">♨️</div>
+            <div class="article-body">
+              <div class="article-meta">
+                <span class="article-cat">Beppu</span>
+                <span class="article-date">1 mayo 2025</span>
+              </div>
+              <h3>Los 8 Infiernos de Beppu: guía completa para visitarlos en español</h3>
+              <p>Géiseres de colores únicos. Azul cobalto, rojo y blanco. Te cuento cuáles valen la pena.</p>
+              <a href="#" class="article-link">Leer más →</a>
+            </div>
+          </div>
+
+          <div class="article-card">
+            <div class="article-thumb t2">🏔</div>
+            <div class="article-body">
+              <div class="article-meta">
+                <span class="article-cat">Yufuin</span>
+                <span class="article-date">24 abril 2025</span>
+              </div>
+              <h3>Yufuin en un día: el pueblo termal más romántico de Kyushu</h3>
+              <p>Callejuelas artesanales, ryokanes con vistas al monte Yufu y baños privados al amanecer.</p>
+              <a href="#" class="article-link">Leer más →</a>
+            </div>
+          </div>
+
+          <div class="article-card">
+            <div class="article-thumb t3">🌋</div>
+            <div class="article-body">
+              <div class="article-meta">
+                <span class="article-cat">Aso</span>
+                <span class="article-date">15 abril 2025</span>
+              </div>
+              <h3>Onsen en el volcán Aso: las aguas más minerales de Japón</h3>
+              <p>Sulfurosas, con gas natural y una energía que se siente en la piel desde el primer contacto.</p>
+              <a href="#" class="article-link">Leer más →</a>
+            </div>
+          </div>
+
+          <div class="article-card">
+            <div class="article-thumb t4">👨‍👩‍👧</div>
+            <div class="article-body">
+              <div class="article-meta">
+                <span class="article-cat">Familias</span>
+                <span class="article-date">8 abril 2025</span>
+              </div>
+              <h3>Onsen con niños en Kyushu: todo lo que necesitas saber</h3>
+              <p>¿Puedo llevar a mis hijos? ¿Qué es un baño privado? Resuelvo todas las dudas.</p>
+              <a href="#" class="article-link">Leer más →</a>
+            </div>
+          </div>
+
+          <div class="article-card">
+            <div class="article-thumb t5">🍜</div>
+            <div class="article-body">
+              <div class="article-meta">
+                <span class="article-cat">Gastronomía</span>
+                <span class="article-date">1 abril 2025</span>
+              </div>
+              <h3>Qué comer en Fukuoka: ramen tonkotsu, mentaiko y los mejores yatai</h3>
+              <p>Te llevo a los puestos callejeros donde comen los locales, no los turistas.</p>
+              <a href="#" class="article-link">Leer más →</a>
+            </div>
+          </div>
+        </main>
+
+        <aside class="sidebar">
+          <div class="sidebar-widget">
+            <p class="widget-title">♨️ Categorías</p>
+            <ul class="cat-list">
+              <li><a href="#">Beppu <span class="cat-count">8</span></a></li>
+              <li><a href="#">Yufuin <span class="cat-count">6</span></a></li>
+              <li><a href="#">Aso <span class="cat-count">4</span></a></li>
+              <li><a href="#">Fukuoka <span class="cat-count">5</span></a></li>
+              <li><a href="#">Familias <span class="cat-count">7</span></a></li>
+              <li><a href="#">Parejas <span class="cat-count">5</span></a></li>
+              <li><a href="#">Gastronomía <span class="cat-count">6</span></a></li>
+              <li><a href="#">Cultura Japonesa <span class="cat-count">9</span></a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-widget">
+            <p class="widget-title">🕐 Recientes</p>
+            <ul class="recent-list">
+              <li class="recent-item">
+                <div class="recent-thumb rt1">♨️</div>
+                <div>
+                  <a href="#">Los 8 Infiernos de Beppu</a>
+                  <span class="recent-date">1 mayo 2025</span>
+                </div>
+              </li>
+              <li class="recent-item">
+                <div class="recent-thumb rt2">🏔</div>
+                <div>
+                  <a href="#">Yufuin en un día</a>
+                  <span class="recent-date">24 abril 2025</span>
+                </div>
+              </li>
+              <li class="recent-item">
+                <div class="recent-thumb rt3">🌋</div>
+                <div>
+                  <a href="#">Onsen en el volcán Aso</a>
+                  <span class="recent-date">15 abril 2025</span>
+                </div>
+              </li>
+              <li class="recent-item">
+                <div class="recent-thumb rt4">👨‍👩‍👧</div>
+                <div>
+                  <a href="#">Onsen con niños</a>
+                  <span class="recent-date">8 abril 2025</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar-cta">
+            <p>¿Listo para vivir la experiencia? 🌸</p>
+            <a href="https://www.instagram.com/onsen.con.fruta" target="_blank" rel="noopener">
+              📩 Reservar ahora
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div style="max-width:600px;margin:0 auto;position:relative;z-index:2;">
+      <p class="section-label">Empieza aquí</p>
+      <h2>¿Te gustaría descubrir<br>Kyushu <em>conmigo?</em></h2>
+      <p class="lead">Escríbeme por Instagram. Con gusto te ayudo a planificar tu experiencia perfecta.</p>
+
+      <a href="https://www.instagram.com/onsen.con.fruta" target="_blank" rel="noopener" class="cta-handle">
+        @onsen.con.fruta
+      </a>
+      <br />
+      <a href="https://www.instagram.com/onsen.con.fruta" target="_blank" rel="noopener" class="btn-pink" style="font-size:1rem;padding:1rem 2.5rem;">
+        📩 Escríbeme por DM
+      </a>
+      <p class="cta-small">Respondo en menos de 24h · Consulta gratuita · Sin compromiso</p>
+    </div>
+  </section>
+
+
+  <footer>
+    <p>© 2025 Onsen con Fruta · Kyushu, Japón 🌸</p>
+    <p><a href="https://www.instagram.com/onsen.con.fruta" target="_blank" rel="noopener">@onsen.con.fruta</a></p>
+  </footer>
+
+</body>
+</html>

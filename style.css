@@ -1,0 +1,375 @@
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --ink:    #1C2E4A;
+  --ink2:   #2A3E5E;
+  --ink3:   #4A6080;
+  --page:   #FDF6EC;
+  --paper:  #F5EBD8;
+  --warm:   #EDD9B8;
+  --amber:  #B87C08;
+  --amber2: #D89A10;
+  --amber3: #ECC038;
+  --red:    #B42C14;
+  --red2:   #8C1E0C;
+  --green:  #2A6040;
+  --mist:   #7A8FA8;
+  --navy:   #1C2E4A;
+  --rule:   rgba(184,124,8,.18);
+  --rule2:  rgba(184,124,8,.09);
+  --border: rgba(28,46,74,.14);
+  --seigaiha: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='20'%3E%3Cellipse cx='20' cy='20' rx='20' ry='20' fill='none' stroke='rgba(28,46,74,0.06)' stroke-width='1'/%3E%3Cellipse cx='0' cy='20' rx='20' ry='20' fill='none' stroke='rgba(28,46,74,0.06)' stroke-width='1'/%3E%3Cellipse cx='40' cy='20' rx='20' ry='20' fill='none' stroke='rgba(28,46,74,0.06)' stroke-width='1'/%3E%3Cellipse cx='10' cy='0' rx='20' ry='20' fill='none' stroke='rgba(28,46,74,0.05)' stroke-width='1'/%3E%3Cellipse cx='30' cy='0' rx='20' ry='20' fill='none' stroke='rgba(28,46,74,0.05)' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #E8D9C0;
+  color: var(--ink);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  font-size: 13px;
+  line-height: 2;
+  font-weight: 400;
+}
+
+
+/* ===== PAGE ===== */
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 32px auto;
+  background-color: #FDF6EC;
+  background-image: url("images/bg-onsen-pattern.png");
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-size: 100%;
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+  break-after: page;
+  box-shadow: 0 8px 30px rgba(0,0,0,.12);
+  border-radius: 12px;
+  z-index: 1;
+}
+
+/* ===== COVER ===== */
+.p-cover {
+  background: url("images/urahyoshi.png") center / cover no-repeat;
+  min-height: 297mm;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.cv-top {
+  padding: 12mm 14mm 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+.cv-top-line { flex:1; height:1px; background:rgba(236,192,56,.25); }
+.cv-top-text {
+  font-size: 7px; font-weight: 600; letter-spacing: 4.5px;
+  text-transform: uppercase; color: var(--amber3); white-space: nowrap;
+}
+
+.cv-main {
+  flex: 1;
+  padding: 10mm 14mm 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 140mm;
+}
+
+.cv-label { font-size:7.5px; font-weight:600; letter-spacing:5px; text-transform:uppercase; color:rgba(255,255,255,.26); margin-bottom:16px; }
+.cv-title-ja { font-family:'Noto Serif JP',serif; font-weight:900; font-size:60px; line-height:.92; color:#fff; margin-bottom:10px; letter-spacing:-1px; }
+.cv-title-ja span { color:var(--amber3); }
+.cv-title-en { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:40px; line-height:1.05; color:rgba(255,255,255,.42); font-style:italic; }
+.cv-rule { display:none; }
+.cv-desc { font-size:11px; font-weight:300; line-height:2; color:rgba(255,255,255,.38); max-width:300px; margin-bottom:28px; }
+
+.cv-tags { display:flex; flex-wrap:wrap; gap:8px; border-top:1px solid rgba(255,255,255,.07); padding-top:16px; }
+.cv-tag { font-size:7.5px; font-weight:500; letter-spacing:.5px; color:rgba(255,255,255,.22); line-height:1.8; }
+.cv-tag::before { content:'—'; color:var(--amber3); margin-right:7px; }
+
+.cv-foot {
+  padding:14px 14mm 14mm; flex-shrink:0;
+  display:flex; align-items:flex-end; justify-content:space-between;
+  border-top:1px solid rgba(255,255,255,.07);
+  position:relative; z-index:2;
+}
+.cv-by-lbl { font-size:7px; letter-spacing:3px; color:var(--amber3); text-transform:uppercase; margin-bottom:4px; }
+.cv-by-name { font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:600; color:#fff; line-height:1; }
+.cv-by-name span { color:var(--amber3); }
+.cv-by-sub { font-size:8.5px; color:rgba(255,255,255,.26); margin-top:4px; }
+
+.cv-bar { position:absolute; bottom:0; left:0; right:0; height:4px; background:linear-gradient(90deg,var(--amber),var(--amber3),#E05050); }
+
+.cv-scene { position:absolute; left:0; right:0; bottom:47mm; height:auto; max-height:600px; z-index:1; overflow:hidden; }
+
+/* ===== CHAPTER OPENER ===== */
+.ch-opener {
+  height:88px; display:flex; align-items:flex-end;
+  padding:0 14mm 16px; position:relative; overflow:hidden;
+}
+.ch-opener::before { content:''; position:absolute; inset:0; background:linear-gradient(to right,rgba(0,0,0,.25) 0%,transparent 70%); z-index:1; }
+.ch-num-ghost { position:absolute; right:10mm; top:50%; transform:translateY(-50%); font-family:'Noto Serif JP',serif; font-size:96px; font-weight:900; color:rgba(255,255,255,.055); line-height:1; z-index:0; pointer-events:none; }
+.ch-opener-content { position:relative; z-index:2; }
+.ch-num { font-size:7px; font-weight:600; letter-spacing:4px; color:var(--amber3); text-transform:uppercase; margin-bottom:6px; }
+.ch-title { font-family:'Noto Serif JP',serif; font-size:26px; font-weight:700; color:#fff; line-height:1.15; }
+.ch-num { font-size:9px; font-weight:700; letter-spacing:4px; color:var(--amber3); text-transform:uppercase; margin-bottom:8px; }
+
+.bg-dark  { background:linear-gradient(145deg,#141C28,#1C2A3C); }
+.bg-amber { background:linear-gradient(145deg,#1A1006,#2E1E0A); }
+.bg-red   { background:linear-gradient(145deg,#1C0804,#2C1008); }
+.bg-gold  { background:linear-gradient(145deg,#180E04,#301C08); }
+.bg-green { background:linear-gradient(145deg,#081408,#101E0C); }
+.bg-slate { background:linear-gradient(145deg,#14202C,#1C2E3C); }
+.bg-ocean { background:linear-gradient(145deg,#0C1E40,#1A3468); }
+.bg-lava  { background:linear-gradient(145deg,#400808,#601410); }
+.bg-teal  { background:linear-gradient(145deg,#0C2C24,#183C30); }
+
+/* ===== PAGE BODY ===== */
+.pg { padding:16px 14mm 0; }
+
+/* ===== PAGE FOOTER ===== */
+.pg-foot {
+  position:absolute; bottom:4mm; left:14mm; right:14mm;
+  display:flex; align-items:center;
+  border-top:1px solid var(--rule); padding-top:5px;
+}
+.pf-br { font-size:7px; letter-spacing:2.5px; color:var(--amber); font-weight:700; text-transform:uppercase; }
+.pf-n { margin-left:auto; font-family:'Cormorant Garamond',serif; font-size:14px; font-weight:600; color:var(--mist); }
+
+/* ===== LABELS ===== */
+.lbl {
+  font-size:9px; font-weight:700; letter-spacing:4px; text-transform:uppercase;
+  color:var(--navy); margin-bottom:12px; margin-top:22px;
+  display:flex; align-items:center; gap:10px;
+}
+.lbl::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--amber); flex-shrink:0; }
+.lbl::after { content:''; flex:1; height:1px; background:var(--rule); }
+.lbl:first-child { margin-top:0; }
+
+/* ===== BODY TEXT ===== */
+.bp { font-size:13px; line-height:2.1; color:var(--ink2); font-weight:400; text-align:justify; hyphens:none; }
+.bp strong { font-weight:700; color:var(--ink); }
+
+/* ===== PULL QUOTE ===== */
+.pq {
+  border-left:3px solid var(--amber2);
+  padding:14px 18px; background:var(--paper);
+  border-radius:0 12px 12px 0; margin:16px 0;
+}
+.pq p { font-family:'Noto Serif JP',serif; font-size:13.5px; font-weight:400; color:var(--ink); line-height:1.8; }
+.pq cite { font-size:7.5px; letter-spacing:2px; color:var(--amber); text-transform:uppercase; display:block; margin-top:7px; }
+
+/* ===== CALLOUT ===== */
+.callout {
+  background:var(--paper); border:1.5px solid var(--border);
+  border-left:3px solid var(--amber); border-radius:0 12px 12px 0;
+  padding:12px 15px 11px; margin:12px 0;
+}
+.callout-red   { border-left-color:var(--red); }
+.callout-dark  { border-left-color:var(--navy); }
+.callout-gold  { border-left-color:var(--amber2); }
+.callout-green { border-left-color:var(--green); }
+.callout-head { font-size:7px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--amber); margin-bottom:6px; }
+.callout-red   .callout-head { color:var(--red); }
+.callout-dark  .callout-head { color:var(--navy); }
+.callout-green .callout-head { color:var(--green); }
+.callout p, .callout li { font-size:12.5px; color:var(--ink2); line-height:1.9; font-weight:400; text-align:justify; hyphens:none; }
+.pq p { font-family:'Noto Serif JP',serif; font-size:15px; font-weight:500; color:var(--ink); line-height:1.9; }
+
+/* ===== TABLES ===== */
+.t { width:100%; border-collapse:collapse; font-size:12px; }
+.t thead th { padding:9px 12px; text-align:left; font-size:9px; letter-spacing:2.5px; font-weight:700; text-transform:uppercase; color:rgba(255,255,255,.85); }
+.t td { padding:9px 12px; vertical-align:top; line-height:1.8; color:var(--ink2); font-size:12px; font-weight:400; hyphens:none; font-variant-numeric:tabular-nums; }
+.t td:first-child { font-weight:600; color:var(--ink); }
+.t.t-amber thead tr { background:#5A3008; }
+.t.t-red   thead tr { background:var(--red2); }
+.t.t-green thead tr { background:#1E4A28; }
+.t.t-navy  thead tr { background:var(--navy); }
+
+/* ===== GRIDS ===== */
+.two   { display:grid; grid-template-columns:1fr 1fr; gap:11px; }
+.three { display:grid; grid-template-columns:repeat(3,1fr); gap:9px; }
+
+/* ===== STAT CARD ===== */
+.stat-card { border-radius:16px; padding:16px 14px 13px; text-align:center; position:relative; overflow:hidden; }
+.stat-num-wrap { display:flex; align-items:baseline; justify-content:center; gap:4px; line-height:1; margin-bottom:9px; }
+.stat-num { font-family:'Cormorant Garamond',serif; font-size:64px; font-weight:700; line-height:.9; letter-spacing:-2px; font-style:italic; font-variant-numeric:tabular-nums; }
+.stat-unit { font-family:'Noto Sans JP',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; line-height:1; padding-bottom:6px; opacity:.72; }
+.stat-label { font-size:8px; font-weight:700; letter-spacing:2px; color:var(--amber); text-transform:uppercase; border-top:1px solid rgba(255,255,255,.10); padding-top:8px; margin-bottom:5px; }
+.stat-desc { font-size:9px; line-height:1.65; font-weight:300; }
+
+/* ===== INFO TILE ===== */
+.tile { background:var(--paper); padding:11px 12px; border:1.5px solid var(--border); border-radius:12px; border-top:3px solid var(--navy); }
+.tile-name { font-family:'Noto Serif JP',serif; font-size:14px; font-weight:700; color:var(--ink); margin-bottom:2px; }
+.tile-tag { font-size:7px; color:var(--amber); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:5px; }
+.tile-desc { font-size:10px; color:var(--ink3); line-height:1.65; font-weight:300; }
+
+/* ===== JIGOKU CARD ===== */
+.jcard { border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,.15); }
+.jcard-head { padding:16px 14px 13px; font-family:'Noto Serif JP',serif; font-size:14px; font-weight:700; color:#fff; letter-spacing:.5px; text-shadow:0 1px 4px rgba(0,0,0,.4); position:relative; }
+.jcard-head::after { content:''; position:absolute; bottom:0; left:0; right:0; height:1px; background:rgba(255,255,255,.10); }
+.jcard-body { background:var(--paper); padding:10px 13px; font-size:10px; color:var(--ink2); line-height:1.72; font-weight:300; }
+
+/* ===== PROFILE ===== */
+.profile { display:flex; gap:16px; align-items:flex-start; background:var(--paper); border:1.5px solid var(--border); border-radius:12px; border-left:3px solid var(--amber); padding:15px; margin-bottom:14px; }
+.profile-avatar { width:56px; height:56px; flex-shrink:0; background:linear-gradient(145deg,#1C2E4A,#0C1828); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Noto Serif JP',serif; font-size:22px; font-weight:900; color:var(--amber3); border:2px solid var(--amber); }
+.profile-name { font-family:'Noto Serif JP',serif; font-size:19px; font-weight:700; color:var(--ink); line-height:1; margin-bottom:2px; }
+.profile-name-en { font-family:'Cormorant Garamond',serif; font-size:14px; font-style:italic; color:var(--amber2); }
+.profile-sub { font-size:8.5px; color:var(--mist); letter-spacing:.5px; margin-top:3px; margin-bottom:9px; }
+.profile-bio { font-size:10.5px; color:var(--ink2); line-height:1.85; font-weight:300; }
+
+/* ===== BADGE ROW ===== */
+.badge-row { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+.badge { display:inline-block; font-size:8px; font-weight:600; letter-spacing:.5px; padding:4px 12px; border-radius:20px; color:#fff; background:var(--navy); }
+.badge-amber { background:var(--amber); }
+.badge-red   { background:var(--red); }
+.badge-green { background:var(--green); }
+
+/* ===== WATER SWATCH ===== */
+.wsw { display:inline-flex; align-items:center; gap:7px; line-height:1.5; }
+.wsw-dot { width:11px; height:11px; border-radius:50%; flex-shrink:0; border:1.5px solid rgba(0,0,0,.15); display:inline-block; }
+
+/* ===== COMPARISON BLOCK ===== */
+.cmp-block { background:var(--paper); border:1.5px solid var(--border); border-radius:12px; overflow:hidden; margin-bottom:11px; }
+.cmp-head { background:var(--navy); padding:8px 14px; font-size:8px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.65); }
+.cmp-body { padding:10px 14px; }
+.cmp-row { display:flex; align-items:baseline; gap:8px; padding:5px 0; border-bottom:1px solid var(--rule2); font-size:10.5px; }
+.cmp-row:last-child { border:none; }
+.cmp-loc { font-weight:700; color:var(--ink); min-width:100px; }
+.cmp-val { color:var(--ink2); font-weight:300; }
+.cmp-hl  { color:var(--amber); font-weight:700; }
+
+/* ===== CTA PAGE ===== */
+.p-cta {
+  background: url("images/urahyoshi.png") center / cover no-repeat;
+  min-height:297mm; display:flex; flex-direction:column; justify-content:center;
+  align-items:center; text-align:center; color:#fff; padding:0 18mm; position:relative;
+}
+.cta-watermark { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:'Noto Serif JP',serif; font-size:200px; font-weight:900; color:rgba(255,255,255,.022); pointer-events:none; user-select:none; }
+.cta-eyebrow { font-size:7.5px; letter-spacing:5px; font-weight:600; text-transform:uppercase; color:var(--amber3); margin-bottom:16px; position:relative; z-index:2; }
+.cta-title { font-family:'Noto Serif JP',serif; font-size:36px; font-weight:900; color:#fff; line-height:1.2; margin-bottom:6px; position:relative; z-index:2; }
+.cta-title-en { font-family:'Cormorant Garamond',serif; font-size:26px; font-style:italic; font-weight:300; color:var(--amber3); margin-bottom:22px; position:relative; z-index:2; }
+.cta-rule { width:44px; height:2px; background:var(--amber3); margin:0 auto 22px; position:relative; z-index:2; }
+.cta-desc { font-size:11.5px; font-weight:300; line-height:2; color:rgba(255,255,255,.45); max-width:280px; margin-bottom:28px; position:relative; z-index:2; }
+.cta-features { display:flex; flex-direction:column; gap:9px; margin-bottom:32px; position:relative; z-index:2; }
+.cta-feat { font-size:10px; color:rgba(255,255,255,.33); display:flex; align-items:center; gap:8px; justify-content:center; }
+.cta-feat::before { content:'—'; color:var(--amber3); }
+.cta-btn { display:inline-block; background:var(--amber); color:#fff; font-weight:700; font-size:12px; letter-spacing:2px; text-transform:uppercase; padding:14px 34px; text-decoration:none; border-radius:24px; position:relative; z-index:2; margin-bottom:14px; }
+.cta-sub { font-size:9px; color:rgba(255,255,255,.18); position:relative; z-index:2; }
+.cta-bar { position:absolute; bottom:0; left:0; right:0; height:4px; background:linear-gradient(90deg,var(--amber),var(--amber3),#E05050); }
+
+@media print {
+  body { background:#fff; }
+  .page { margin:0; box-shadow:none; page-break-after:always; }
+}
+
+/* ===== 英語・スペイン語フォント改善 ===== */
+.bp,
+.callout p,
+.callout li,
+.pq p,
+.t td,
+.stat-desc {
+  font-family: 'Source Sans 3', 'Noto Sans JP', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.ch-title,
+.cv-title-en,
+.cta-title-en {
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.03em;
+}
+
+.lbl,
+.callout-head,
+.pf-br,
+.cv-top-text,
+.cv-by-lbl,
+.ch-num {
+  font-family: 'Source Sans 3', sans-serif;
+  letter-spacing: 0.08em;
+}
+
+/* ===== 文字サイズ改善 ===== */
+
+/* 表紙ラベル */
+.cv-label { font-size: 9px; letter-spacing: 4px; }
+.cv-top-text { font-size: 8.5px; letter-spacing: 5px; }
+.cv-by-lbl { font-size: 8.5px; }
+.cv-by-sub { font-size: 10px; }
+
+/* CTAページ */
+.cta-eyebrow { font-size: 9px; }
+.cta-feat { font-size: 12px; line-height: 2; }
+.cta-feat::before { font-size: 12px; }
+.cta-desc { font-size: 13px; line-height: 2.1; }
+.cta-sub { font-size: 11px; }
+
+/* ページフッター */
+.pf-br { font-size: 8.5px; letter-spacing: 3px; }
+.pf-n { font-size: 16px; }
+
+/* チャプターラベル */
+.ch-num { font-size: 8.5px; letter-spacing: 4px; }
+
+/* callout */
+.callout-head { font-size: 8.5px; letter-spacing: 3px; }
+.callout p, .callout li { font-size: 12px; line-height: 1.95; }
+
+/* lbl */
+.lbl { font-size: 8.5px; letter-spacing: 4px; }
+
+/* ===== 全体的な文字改善 ===== */
+
+/* 本文を太く・大きく */
+.bp { font-size: 13px; font-weight: 400; line-height: 2.1; }
+
+/* プロフィール内テキスト */
+.cv-by-name { font-size: 30px; }
+.cv-by-sub { font-size: 11px; font-weight: 400; color: rgba(255,255,255,.45); }
+
+/* プロフィールカード内説明文 */
+.pg div[style*="rgba(255,255,255,.42)"] { color: rgba(255,255,255,.7) !important; font-size: 12px !important; font-weight: 400 !important; }
+
+/* CTAフィーチャーリスト */
+.cta-feat { font-size: 13px; font-weight: 400; color: rgba(255,255,255,.55); }
+
+/* テーブルヘッダー */
+.t thead th { font-size: 9px; color: rgba(255,255,255,.85); }
+.t td { font-size: 12px; font-weight: 400; }
+
+/* セクションラベル（lbl内テキスト） */
+.lbl { font-size: 9px; font-weight: 700; }
+
+/* callout */
+.callout p, .callout li { font-size: 12.5px; font-weight: 400; }
+
+/* テーブル内小文字 */
+.t td span[style*="font-size:8px"] { font-size: 10px !important; }
+
+/* ページフッター */
+.pf-br { font-size: 9px; font-weight: 700; }
+
+/* ===== CTAページ文字サイズ改善 ===== */
+.cta-eyebrow { font-size: 10px; letter-spacing: 5px; }
+.cta-title { font-size: 44px; }
+.cta-title-en { font-size: 32px; }
+.cta-desc { font-size: 15px; line-height: 2.2; color: rgba(255,255,255,.6); }
+.cta-feat { font-size: 14px; line-height: 2.2; font-weight: 400; color: rgba(255,255,255,.6); }
+.cta-feat::before { font-size: 14px; }
+.cta-btn { font-size: 14px; padding: 16px 40px; }
+.cta-sub { font-size: 11px; line-height: 2; }
