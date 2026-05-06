@@ -373,3 +373,170 @@ body {
 .cta-feat::before { font-size: 14px; }
 .cta-btn { font-size: 14px; padding: 16px 40px; }
 .cta-sub { font-size: 11px; line-height: 2; }
+
+
+.cta-free-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(236, 192, 56, 0.12);
+  border: 1px solid rgba(236, 192, 56, 0.35);
+  border-radius: 100px;
+  padding: 7px 22px;
+  margin-bottom: 20px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #ECC038;
+  font-weight: 700;
+}
+ 
+.cta-title-sub {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+ 
+.cta-offer-box {
+  width: 100%;
+  max-width: 460px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(236, 192, 56, 0.2);
+  border-radius: 14px;
+  padding: 28px 32px;
+  margin-bottom: 10px;
+}
+ 
+.cta-offer-head {
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: #ECC038;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(236, 192, 56, 0.12);
+}
+ 
+.cta-offer-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+ 
+.cta-offer-item:last-child {
+  margin-bottom: 0;
+}
+ 
+.cta-check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(236, 192, 56, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 10px;
+  color: #ECC038;
+}
+ 
+.cta-offer-text {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.75;
+  font-weight: 300;
+}
+ 
+.cta-offer-text strong {
+  color: #fff;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 2px;
+}
+ 
+.cta-offer-text span {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.35);
+}
+ 
+.cta-limit-note {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  margin: 16px 0 20px;
+}
+ 
+.cta-btn-note {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.25);
+  text-align: center;
+  letter-spacing: 1.5px;
+  margin-top: 10px;
+}
+
+/* cta-desc 中央寄せ */
+.cta-desc {
+  text-align: center;
+  max-width: 340px;
+}
+
+/* チェックリスト 文頭揃え */
+.cta-offer-text {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.75;
+  font-weight: 300;
+  text-align: left;
+}
+
+.cta-offer-text strong {
+  color: #fff;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 2px;
+  text-align: left;
+}
+
+.cta-offer-text span {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.35);
+  text-align: left;
+  display: block;
+}
+
+.cta-desc {
+  max-width: 520px;
+  text-align: center;
+}
+
+/* ===== CTA 文字サイズ全体調整 ===== */
+.cta-eyebrow { font-size: 11px; letter-spacing: 5px; }
+
+.cta-free-badge { font-size: 13px; letter-spacing: 2px; padding: 9px 26px; }
+
+.cta-title { font-size: 48px; }
+
+.cta-title-sub { font-size: 14px; letter-spacing: 2px; }
+
+.cta-desc { font-size: 15px; line-height: 2.2; max-width: 520px; text-align: center; }
+
+.cta-offer-head { font-size: 11px; letter-spacing: 3px; }
+
+.cta-offer-text { font-size: 14px; line-height: 1.85; }
+
+.cta-offer-text span { font-size: 12px; }
+
+.cta-limit-note { font-size: 12px; letter-spacing: 2px; }
+
+.cta-btn { font-size: 15px; padding: 18px 44px; letter-spacing: 3px; }
+
+.cta-btn-note { font-size: 11px; letter-spacing: 1.5px; }
+
+.cta-sub { font-size: 12px; line-height: 2; }
+
+.cta-offer-head {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
